@@ -6,8 +6,6 @@
 
 /* потом удалить-фон */
 .header,
-.hero,
-.price,
 .contact-form,
 .contacts {
   background-color: grey;
@@ -25,6 +23,9 @@
   --dark-text-color: #303030;
   --suptitle-text-color: rgba(157, 164, 189, 0.6);
   --middle-text-color: #9da4bd;
+  --dash-dark: rgba(157, 164, 189, 0.6);
+
+  --price-bgc: #111319;
 }
 
 body {
@@ -79,8 +80,29 @@ ul {
   padding: 0 15px;
   width: 1200px;
 }
-/* end общие */
 
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.dash-dark::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  color: var(--dash-dark);
+  /* transform: rotate(90deg); */
+  /* end общие */
+}
+
+.dash-light::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  color: var(--dark-text-color);
+  /* transform: rotate(90deg); */
+  /* end общие */
+}
 /* HEADER_______________________________________*/
 .header > .container {
   display: flex;
@@ -153,11 +175,18 @@ ul {
 
 /* HERO____________________________________________ */
 .hero > .container {
+  display: flex;
+
   background-image: url(../images/hero.svg);
   background-repeat: no-repeat;
-  width: 1070px;
+  width: 1280px;
   height: 680px;
 
+  outline: 1px solid tomato;
+}
+
+.hero-left-size {
+  width: 155px;
   outline: 1px solid tomato;
 }
 .hero-link {
@@ -181,7 +210,7 @@ ul {
   color: var(--accent-text);
 }
 
-.hero-box {
+.hero-right-size {
   width: 500px;
 }
 
@@ -223,8 +252,6 @@ ul {
 /* about us____________________________________ */
 .about > .container {
   display: flex;
-  padding-top: 165px;
-  padding-bottom: 134px;
 }
 
 .about-list {
@@ -303,20 +330,18 @@ ul {
 
 /* end about us_______________________________ */
 
-/* price_____________________________________ */
-.price > .container {
-  padding-top: 130px;
-  padding-bottom: 130px;
-
+/* =====================PRICE=========================== */
+.price-bgc {
+  background-color: var(--price-bgc);
   background-image: url(../images/price.svg);
-  background-repeat: no-repeat;
-  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
   height: 718px;
-
-  outline: 1px solid tomato;
 }
 
 .price-suptitle {
+  display: inline-block;
   margin-bottom: 20px;
 
   color: var(--suptitle-text-color);
@@ -340,21 +365,31 @@ ul {
   letter-spacing: 0.05em;
 }
 
-.price-btn {
-}
-
 .price-box {
   display: flex;
+
+  margin-bottom: 50px;
 }
 
+.price-list-left {
+  background-color: linear-gradient(
+    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+      (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+  );
+}
+
+.price-list-right {
+  background-color: linear-gradient(
+    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+      (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+  );
+}
 .price-list-left,
 .price-list-right {
   width: 585px;
   height: 240px;
   padding: 30px 40px;
-}
 
-.price-list {
   color: var(--middle-text-color);
 
   font-weight: normal;
@@ -368,15 +403,9 @@ ul {
   margin-bottom: 20px;
 }
 
-/* .price-name,
-.price-cost {
-  color: var(--middle-text-color);
-
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-} */
+.price-btn {
+  text-align: center;
+}
 /* end price */
 
 /* преимущества */
@@ -468,8 +497,10 @@ ul {
 }
 /* end мастера */
 
-/* галерея */
+/* ====================GALLERY===================== */
 .gallery-subtitle {
+  margin-bottom: 40px;
+
   color: var(--dark-text-color);
 
   font-weight: 600;
@@ -478,7 +509,20 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-/* end галерея */
+
+.gallery-list {
+  display: flex;
+}
+
+.gallery-item {
+  flex-basis: calc(100% -90px) / 4));
+  margin-right: 30px;
+}
+
+.gallery-item:nth-child(4n) {
+  margin-right: 0;
+}
+/* =================END GALLERY===================== */
 
 /* contact form */
 .contact-form-title {
