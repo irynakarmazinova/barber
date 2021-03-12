@@ -19,16 +19,14 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- шапка -->
+    <!-- HEADER -->
     <header class="header">
       <div class="container">
         <nav class="navigation">
           <a class="logo link" href="">
-            <img
-              class="logo-img"
-              src="./images/header/logo.svg"
-              alt="логотип"
-            />
+            <svg class="logo-icon" width="68" height="54">
+              <use href="./images/symbol-defs.svg#icon-logo"></use>
+            </svg>
           </a>
           <ul class="header-list list">
             <li class="header-item">
@@ -54,12 +52,12 @@
     </header>
 
     <main>
-      <!-- hero -->
+      <!-- HERO -->
       <section class="hero">
         <div class="container">
           <!-- left -->
           <div class="hero-left-size">
-            <ul class="hero-list-sns list">
+            <ul class="hero-list-sns list dash-dark">
               <li class="hero-item-sns">
                 <a
                   class="hero-link link"
@@ -83,9 +81,9 @@
             </ul>
           </div>
 
-          <!-- center -->
+          <!-- right -->
           <div class="hero-right-size">
-            <p class="hero-suptitle dash-dark" lang="en">
+            <p class="hero-suptitle dash-light" lang="en">
               A hair salon for men in Kyiv
             </p>
             <h1 class="hero-title" lang="en">BarberShop</h1>
@@ -97,7 +95,7 @@
         </div>
       </section>
 
-      <!-- about us -->
+      <!-- ABOUTUS -->
       <section class="about section">
         <div class="container">
           <ul class="about-list list">
@@ -120,7 +118,7 @@
           </ul>
 
           <div class="about-box">
-            <p class="about-suptitle dash-light">О НАС</p>
+            <p class="about-suptitle dash-dark">О НАС</p>
             <h2 class="about-title">Лучший Барбершоп твоего города</h2>
             <p class="about-subtitle">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
@@ -133,65 +131,65 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="secondary-btn" type="button">онлайн-запись</button>
+            <button class="main-btn btn-send" type="button">
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
 
-      <!-- price -->
+      <!-- PRICE -->
       <section class="price section">
-        <div class="price-bgc">
-          <div class="container">
-            <p class="price-suptitle dash-dark">
-              Проведи время в компании лучших мастеров
-            </p>
-            <h2 class="price-title">Услуги и цены</h2>
-            <div class="price-box">
-              <ul class="price-list-left list">
-                <li class="price-item-left">
-                  <span class="price-name">Мужская стрижка</span
-                  ><span class="price-cost"> от 300 грн.</span>
-                </li>
-                <li class="price-item-left">
-                  <span class="price-name">Стрижка бороды</span
-                  ><span class="price-cost"> от 200 грн.</span>
-                </li>
-                <li class="price-item-left">
-                  <span class="price-name">Стрижка усов</span
-                  ><span class="price-cost"> от 200 грн.</span>
-                </li>
-                <li class="price-item-left">
-                  <span class="price-name">Бритье опасной бритвой</span
-                  ><span class="price-cost"> от 200 грн.</span>
-                </li>
-              </ul>
-              <ul class="price-list-right list">
-                <li class="price-item-right">
-                  <span class="price-name">Cтрижка у стажера</span
-                  ><span class="price-cost"> от 50 грн.</span>
-                </li>
-                <li class="price-item-right">
-                  <span class="price-name">Стрижка под насадку</span
-                  ><span class="price-cost"> от 200 грн.</span>
-                </li>
-                <li class="price-item-right">
-                  <span class="price-name">Детская стрижка (до 12 лет)</span
-                  ><span class="price-cost"> от 300 грн.</span>
-                </li>
-                <li class="price-item-right">
-                  <span class="price-name">Камуфлирование седины</span
-                  ><span class="price-cost"> от 200 грн.</span>
-                </li>
-              </ul>
-            </div>
-            <div class="price-btn">
-              <button class="main-btn" type="button">онлайн-запись</button>
-            </div>
+        <div class="container">
+          <p class="price-suptitle dash-light">
+            Проведи время в компании лучших мастеров
+          </p>
+          <h2 class="price-title">Услуги и цены</h2>
+          <div class="price-box">
+            <ul class="price-list-left list">
+              <li class="price-item-left">
+                <span class="price-name">Мужская стрижка</span
+                ><span class="price-cost"> от 300 грн.</span>
+              </li>
+              <li class="price-item-left">
+                <span class="price-name">Стрижка бороды</span
+                ><span class="price-cost"> от 200 грн.</span>
+              </li>
+              <li class="price-item-left">
+                <span class="price-name">Стрижка усов</span
+                ><span class="price-cost"> от 200 грн.</span>
+              </li>
+              <li class="price-item-left">
+                <span class="price-name">Бритье опасной бритвой</span
+                ><span class="price-cost"> от 200 грн.</span>
+              </li>
+            </ul>
+            <ul class="price-list-right list">
+              <li class="price-item-right">
+                <span class="price-name">Cтрижка у стажера</span
+                ><span class="price-cost"> от 50 грн.</span>
+              </li>
+              <li class="price-item-right">
+                <span class="price-name">Стрижка под насадку</span
+                ><span class="price-cost"> от 200 грн.</span>
+              </li>
+              <li class="price-item-right">
+                <span class="price-name">Детская стрижка (до 12 лет)</span
+                ><span class="price-cost"> от 300 грн.</span>
+              </li>
+              <li class="price-item-right">
+                <span class="price-name">Камуфлирование седины</span
+                ><span class="price-cost"> от 200 грн.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="price-btn">
+            <button class="main-btn" type="button">онлайн-запись</button>
           </div>
         </div>
       </section>
 
-      <!-- преимущества -->
+      <!-- ADVANTAGES -->
       <section class="advantages section">
         <div class="container">
           <ul class="advantages-list list">
@@ -212,9 +210,7 @@
               <p class="advantages-text">Подарков постоянным клиентам</p>
             </li>
           </ul>
-          <p class="advantages-suptitle dash-light">
-            старая традиционная школа
-          </p>
+          <p class="advantages-suptitle dash-dark">старая традиционная школа</p>
           <h2 class="advantages-title">Почему приходят именно к нам?</h2>
           <p class="advantages-subtitle">
             О нас говорят только хорошее. Но лучше 1 раз увидеть и
@@ -223,10 +219,10 @@
         </div>
       </section>
 
-      <!-- мастера -->
+      <!-- MASTERS -->
       <section class="masters section">
         <div class="container">
-          <p class="masters-suptitle dash-light">
+          <p class="masters-suptitle dash-dark">
             для настоящих ценителей атмосферы
           </p>
           <h2 class="masters-title">Наши мастера</h2>
@@ -238,8 +234,46 @@
                 width="370"
                 height="346"
               />
-              <h3 class="masters-name" lang="en">John Smith</h3>
-              <p class="masters-job" lang="en">Extreme Barber</p>
+              <div class="masters-box">
+                <h3 class="masters-name" lang="en">John Smith</h3>
+                <p class="masters-job" lang="en">Extreme Barber</p>
+                <ul class="masters-list-icon list">
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="masters-item">
               <img
@@ -248,8 +282,46 @@
                 width="370"
                 height="346"
               />
-              <h3 class="masters-name" lang="en">Michele Doe</h3>
-              <p class="masters-job" lang="en">Extreme Barber</p>
+              <div class="masters-box">
+                <h3 class="masters-name" lang="en">Michele Doe</h3>
+                <p class="masters-job" lang="en">Extreme Barber</p>
+                <ul class="masters-list-icon list">
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="masters-item">
               <img
@@ -258,8 +330,46 @@
                 width="370"
                 height="346"
               />
-              <h3 class="masters-name" lang="en">Alan Black</h3>
-              <p class="masters-job" lang="en">Extreme Barber</p>
+              <div class="masters-box">
+                <h3 class="masters-name" lang="en">Alan Black</h3>
+                <p class="masters-job" lang="en">Extreme Barber</p>
+                <ul class="masters-list-icon list">
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="masters-item-icon">
+                    <a class="masters-link-icon" href="#">
+                      <svg class="masters-icon">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -269,7 +379,7 @@
       <section class="gallery section">
         <div class="container">
           <h2 class="gallery-title" hidden>Gallery</h2>
-          <p class="gallery-subtitle dash-light">
+          <p class="gallery-subtitle dash-dark">
             На латинском языке “барба” означает “борода”
           </p>
           <ul class="gallery-list list">
@@ -309,7 +419,7 @@
         </div>
       </section>
 
-      <!-- contact form -->
+      <!-- CONTACT FORM -->
       <section class="contact-form">
         <div class="container">
           <h2 class="contact-form-title">Онлайн-запись</h2>
@@ -320,7 +430,7 @@
         </div>
       </section>
 
-      <!-- contact info -->
+      <!-- CONTACT INFO -->
       <section class="contacts section">
         <div class="container">
           <h2 class="contacts-title">Контакты</h2>
@@ -356,7 +466,7 @@
       </section>
     </main>
 
-    <!-- footer -->
+    <!-- FOOTER -->
     <footer>
       <div class="container">
         <p class="footer" lang="en">&copy; Copyright 2020</p>

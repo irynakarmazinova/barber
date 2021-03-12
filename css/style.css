@@ -8,7 +8,7 @@
 .header,
 .contact-form,
 .contacts {
-  background-color: grey;
+  background-color: rgb(218, 218, 218);
 }
 /* потом удалить-фон */
 
@@ -26,6 +26,7 @@
   --dash-dark: rgba(157, 164, 189, 0.6);
 
   --price-bgc: #111319;
+  --masters-bgc: #f7f7f7;
 }
 
 body {
@@ -86,24 +87,58 @@ ul {
   padding-bottom: 130px;
 }
 
-.dash-dark::before {
-  content: '';
-  width: 60px;
-  height: 1px;
-  color: var(--dash-dark);
-  /* transform: rotate(90deg); */
-  /* end общие */
+.main-btn {
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 1px solid var(--accent-text);
+
+  color: var(--secondary-text-color);
+  background-color: transparent;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.main-btn:hover,
+.main-btn:focus {
+  background-color: var(--accent-text);
+  border: 1px solid var(--accent-text);
+  border: 1px solid var(--accent-text);
+}
+
+.btn-send {
+  color: var(--dark-text-color);
+}
+
+.btn-send:hover,
+.btn-send:focus {
+  color: var(--secondary-text-color);
 }
 
 .dash-light::before {
+  display: inline-block;
+  flex-shrink: 0;
   content: '';
   width: 60px;
   height: 1px;
-  color: var(--dark-text-color);
-  /* transform: rotate(90deg); */
-  /* end общие */
+  background-color: var(--dash-dark);
 }
-/* HEADER_______________________________________*/
+
+.dash-dark::before {
+  display: inline-block;
+  flex-shrink: 0;
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--dark-text-color);
+}
+/* end общие */
+/* =====================HEADER=========================*/
 .header > .container {
   display: flex;
   align-items: center;
@@ -116,6 +151,11 @@ ul {
 
 .logo {
   margin-right: 71px;
+  padding: 32px 0;
+}
+
+.logo-icon {
+  fill: var(--dark-text-color);
 }
 
 .header-item:not(:last-child) {
@@ -124,10 +164,11 @@ ul {
 
 .header-list {
   display: flex;
-  padding: 52px 0;
 }
 
 .header-link {
+  padding: 52px 0;
+
   color: var(--secondary-text-color);
 
   font-weight: 600;
@@ -150,36 +191,21 @@ ul {
   text-transform: uppercase;
 }
 
-.main-btn {
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 25px;
-  border: 1px solid var(--accent-text);
-
-  color: var(--secondary-text-color);
-  background-color: transparent;
-
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  cursor: pointer;
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-text);
 }
 
-.main-btn:hover,
-.main-btn:focus {
-  background-color: var(--accent-text);
-}
-/* end HEADER _____________________________________*/
+/* ================= END HEADER=====================*/
 
-/* HERO____________________________________________ */
-.hero > .container {
+/* ===================== HERO ===================== */
+.hero {
   display: flex;
 
   background-image: url(../images/hero.svg);
   background-repeat: no-repeat;
   width: 1280px;
+  margin: 0 auto;
   height: 680px;
 
   outline: 1px solid tomato;
@@ -188,10 +214,17 @@ ul {
 .hero-left-size {
   width: 155px;
   outline: 1px solid tomato;
+  background-color: var(--secondary-text-color);
 }
-.hero-link {
+
+.hero-list-sns {
   display: flex;
 }
+
+.hero-item-sns:not(:last-child) {
+  margin-right: 40px;
+}
+
 .hero-link {
   color: var(--dark-text-color);
 
@@ -239,17 +272,15 @@ ul {
 }
 
 .hero-subtitle {
-  padding-bottom: 206px;
-
   color: var(--middle-text-color);
 
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
-/* end hero_______________________________________ */
+/*================= END HERO===================== */
 
-/* about us____________________________________ */
+/* ================= ABOUTUS===================== */
 .about > .container {
   display: flex;
 }
@@ -311,27 +342,10 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.secondary-btn {
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 25px;
-  border: 1px solid var(--accent-text);
+/* ================= END ABOUTUS=====================*/
 
-  color: var(--dark-text-color);
-  background-color: transparent;
-
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-/* end about us_______________________________ */
-
-/* =====================PRICE=========================== */
-.price-bgc {
+/* =====================PRICE======================== */
+.price {
   background-color: var(--price-bgc);
   background-image: url(../images/price.svg);
   margin-right: auto;
@@ -406,9 +420,9 @@ ul {
 .price-btn {
   text-align: center;
 }
-/* end price */
+/* ================= END ABOUTUS=====================*/
 
-/* преимущества */
+/* ================= ADVANTAGES===================== */
 .advantages-number {
   color: var(--dark-text-color);
 
@@ -455,10 +469,18 @@ ul {
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
-/* end преимущества */
+/*  ==============END ADVANTAGES===================== */
 
-/* мастера */
+/*  =================== MASTERS======================= */
+.masters {
+  background-color: var(--masters-bgc);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .masters-suptitle {
+  margin-bottom: 20px;
+
   color: var(--dark-text-color);
 
   font-weight: 600;
@@ -468,7 +490,9 @@ ul {
   text-transform: uppercase;
 }
 
-.marters-title {
+.masters-title {
+  margin-bottom: 44px;
+
   color: var(--dark-text-color);
 
   font-family: var(--secondary-font);
@@ -478,7 +502,25 @@ ul {
   letter-spacing: 0.05em;
 }
 
+.masters-list {
+  display: flex;
+}
+
+.masters-item {
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
+}
+
+.masters-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.masters-box {
+  padding-top: 30px;
+}
 .masters-name {
+  margin-bottom: 8px;
+
   color: var(--dark-text-color);
 
   font-size: 18px;
@@ -488,6 +530,8 @@ ul {
 }
 
 .masters-job {
+  margin-bottom: 30px;
+
   color: var(--accent-text);
 
   font-size: 14px;
@@ -495,7 +539,39 @@ ul {
   text-align: center;
   letter-spacing: 0.02em;
 }
-/* end мастера */
+
+.masters-list-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.masters-item-icon:not(:last-child) {
+  margin-right: 10px;
+}
+
+.masters-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  fill: var(--dark-text-color);
+  background-color: var(--secondary-text-color);
+  border-radius: 50%;
+}
+
+.masters-link-icon:hover,
+.masters-link-icon:focus {
+  fill: var(--accent-text);
+}
+
+.masters-icon {
+  width: 20px;
+  height: 20px;
+}
+/* =================END MASTERS======================= */
 
 /* ====================GALLERY===================== */
 .gallery-subtitle {
@@ -515,7 +591,7 @@ ul {
 }
 
 .gallery-item {
-  flex-basis: calc(100% -90px) / 4));
+  flex-basis: calc((100% -90px) / 4);
   margin-right: 30px;
 }
 
@@ -524,7 +600,7 @@ ul {
 }
 /* =================END GALLERY===================== */
 
-/* contact form */
+/* ===================CONTACTFORM====================== */
 .contact-form-title {
   color: var(--secondary-text-color);
 
@@ -553,9 +629,9 @@ ul {
 .contact-btn:hover {
   background-color: var(--accent-text);
 }
-/* end contact form */
+/* =================END CONTACT FORM==================== */
 
-/* contact info */
+/* ===================CONTACT INFO===================== */
 .contacts-title {
   color: var(--secondary-text-color);
 
@@ -586,9 +662,9 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-/* end contact info */
+/* ================END CONTACT INFO================ */
 
-/* footer____________________________________ */
+/* =================== FOOTER======================= */
 .footer {
   color: var(--middle-text-color);
 
@@ -606,4 +682,4 @@ ul {
   line-height: 1.36;
   letter-spacing: 0.2em;
 }
-/* end footer___________________________________ */
+/* ===================END FOOTER===================== */
