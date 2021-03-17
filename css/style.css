@@ -12,7 +12,7 @@
 }
 /* потом удалить-фон */
 
-/* общие */
+/* ===================COMPONENTS======================== */
 :root {
   --main-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
@@ -27,7 +27,7 @@
 
   --price-bgc: #111319;
   --masters-bgc: #f7f7f7;
-  --contacts-bgc:#191C26;
+  --contacts-bgc: #191c26;
 }
 
 body {
@@ -130,7 +130,7 @@ ul {
 .suptitle {
   display: flex;
   align-items: center;
- margin-bottom: 20px;
+  margin-bottom: 20px;
 
   font-weight: 600;
   font-size: 11px;
@@ -143,7 +143,7 @@ ul {
   color: var(--suptitle-text-color);
 }
 .suptitle-dark {
-   color: var(--dark-text-color);
+  color: var(--dark-text-color);
 }
 
 .dash-light::before {
@@ -164,21 +164,21 @@ ul {
   width: 60px;
   height: 1px;
   margin-right: 20px;
-  
+
   background-color: var(--dark-text-color);
 }
 
 .dash-sns::before {
- display: inline-block;
+  display: inline-block;
   flex-shrink: 0;
   content: '';
   width: 60px;
   height: 1px;
-    margin-right: 40px;
-  
+  margin-right: 40px;
+
   background-color: var(--dark-text-color);
 }
-/* end общие */
+/* ================END COMPONENTS====================== */
 /* =====================HEADER=========================*/
 .header > .container {
   display: flex;
@@ -239,8 +239,6 @@ ul {
 .hero {
   display: flex;
 
-  background-image: url(../images/hero.svg);
-  background-repeat: no-repeat;
   width: 1280px;
   margin: 0 auto;
   height: 680px;
@@ -251,7 +249,6 @@ ul {
 .hero-left-size {
   width: 155px;
   outline: 1px solid tomato;
-  background-color: var(--secondary-text-color);
 }
 
 .hero-list-sns {
@@ -277,8 +274,19 @@ ul {
 }
 
 .hero-right-size {
-  width: 500px;
+  flex-grow: 1;
+  padding-top: 206px;
+  padding-bottom: 206px;
+  padding-left: 100px;
 
+  background-color: var(--price-bgc);
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../images/hero.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-title {
@@ -357,7 +365,7 @@ ul {
 /* =====================PRICE======================== */
 .price {
   background-color: var(--price-bgc);
-  background-image: url(../images/price.svg);
+  background-image: url(../images/price.png);
   margin-right: auto;
   margin-left: auto;
   max-width: 1280px;
@@ -381,19 +389,38 @@ ul {
   margin-bottom: 50px;
 }
 
-.price-list-left {
-  background-color: linear-gradient(
-    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%),
-      (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+/* .price-list-left {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
   );
 }
 
 .price-list-right {
-  background-color: linear-gradient(
-    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%),
-      (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
+} */
+
+.price-list-left:nth-child(2n + 1) {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
   );
 }
+
+.price-list-right:nth-child(2n) {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
+}
+
 .price-list-left,
 .price-list-right {
   width: 585px;
@@ -434,14 +461,25 @@ ul {
   align-items: center;
 }
 
-.advantages-item:nth-child(2n+1) {
+.advantages-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 133px;
+
+  background-color: var(--masters-bgc);
+}
+
+.advantages-item:nth-child(2n + 1) {
   margin-right: 30px;
   margin-bottom: 30px;
 }
 
 .number {
-  width: 170px;
-  height: 133px;
+  width: 122px;
+  height: 93px;
 }
 .advantages-number {
   color: var(--dark-text-color);
@@ -488,6 +526,10 @@ ul {
   background-color: var(--masters-bgc);
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.masters-suptitle {
+  margin-bottom: 44px;
 }
 
 .masters-title {
@@ -611,6 +653,12 @@ ul {
 .contacts-form > .container {
   display: flex;
 }
+
+/* .contacts-left-side {
+  width: 625px;
+  height: 644px;
+} */
+
 .contacts-form-title {
   color: var(--secondary-text-color);
 
@@ -642,6 +690,10 @@ ul {
 /* =================END CONTACTS FORM==================== */
 
 /* ===================CONTACTS INFO===================== */
+/* .contacts-right-side {
+  width: 625px;
+  height: 644px;
+} */
 .contacts-title {
   margin-bottom: 40px;
 
@@ -658,6 +710,15 @@ ul {
   margin-bottom: 70px;
 }
 
+.contacts-box {
+  width: 270px;
+  height: 160px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .contacts-map,
 .contacts-tel,
 .contacts-mail,
@@ -669,15 +730,24 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.contacts-map,
+.contacts-tel,
+.contacts-mail {
+  display: flex;
+  align-items: center;
+}
+
 .contacts-icon {
+  margin-right: 16px;
   width: 24px;
   height: 24px;
-  fill: var(--middle-text-color);
+
+  fill: currentColor;
 }
 
 .contacts-text {
   margin-bottom: 20px;
-  
+
   color: var(--secondary-text-color);
 
   font-weight: 600;
