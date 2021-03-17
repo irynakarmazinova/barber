@@ -27,6 +27,7 @@
 
   --price-bgc: #111319;
   --masters-bgc: #f7f7f7;
+  --contacts-bgc:#191C26;
 }
 
 body {
@@ -87,6 +88,12 @@ ul {
   padding-bottom: 130px;
 }
 
+.header-item:not(:last-child),
+.hero-item-sns:not(:last-child),
+.footer-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .main-btn {
   padding: 12px 20px;
   box-sizing: border-box;
@@ -120,12 +127,33 @@ ul {
   color: var(--secondary-text-color);
 }
 
+.suptitle {
+  display: flex;
+  align-items: center;
+ margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.suptitle-light {
+  color: var(--suptitle-text-color);
+}
+.suptitle-dark {
+   color: var(--dark-text-color);
+}
+
 .dash-light::before {
   display: inline-block;
   flex-shrink: 0;
   content: '';
   width: 60px;
   height: 1px;
+  margin-right: 20px;
+
   background-color: var(--dash-dark);
 }
 
@@ -135,6 +163,19 @@ ul {
   content: '';
   width: 60px;
   height: 1px;
+  margin-right: 20px;
+  
+  background-color: var(--dark-text-color);
+}
+
+.dash-sns::before {
+ display: inline-block;
+  flex-shrink: 0;
+  content: '';
+  width: 60px;
+  height: 1px;
+    margin-right: 40px;
+  
   background-color: var(--dark-text-color);
 }
 /* end общие */
@@ -156,10 +197,6 @@ ul {
 
 .logo-icon {
   fill: var(--dark-text-color);
-}
-
-.header-item:not(:last-child) {
-  margin-right: 40px;
 }
 
 .header-list {
@@ -221,10 +258,6 @@ ul {
   display: flex;
 }
 
-.hero-item-sns:not(:last-child) {
-  margin-right: 40px;
-}
-
 .hero-link {
   color: var(--dark-text-color);
 
@@ -245,18 +278,7 @@ ul {
 
 .hero-right-size {
   width: 500px;
-}
 
-.hero-suptitle {
-  margin-bottom: 20px;
-
-  color: var(--suptitle-text-color);
-
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .hero-title {
@@ -296,18 +318,6 @@ ul {
 .about-box {
   width: 500px;
   margin-left: 64px;
-}
-
-.about-suptitle {
-  margin-bottom: 20px;
-
-  color: var(--dark-text-color);
-
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .about-title {
@@ -351,20 +361,6 @@ ul {
   margin-right: auto;
   margin-left: auto;
   max-width: 1280px;
-  height: 718px;
-}
-
-.price-suptitle {
-  display: inline-block;
-  margin-bottom: 20px;
-
-  color: var(--suptitle-text-color);
-
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .price-title {
@@ -387,14 +383,14 @@ ul {
 
 .price-list-left {
   background-color: linear-gradient(
-    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%),
       (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
   );
 }
 
 .price-list-right {
   background-color: linear-gradient(
-    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
+    (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%),
       (180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%)
   );
 }
@@ -420,9 +416,33 @@ ul {
 .price-btn {
   text-align: center;
 }
-/* ================= END ABOUTUS=====================*/
+/* ================= END PRICE=====================*/
 
 /* ================= ADVANTAGES===================== */
+.advantages > .container {
+  display: flex;
+}
+
+.advantages-left-box {
+  margin-right: 130px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages-item:nth-child(2n+1) {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.number {
+  width: 170px;
+  height: 133px;
+}
 .advantages-number {
   color: var(--dark-text-color);
 
@@ -442,17 +462,9 @@ ul {
   text-align: center;
 }
 
-.advanteges-suptitle {
-  color: var(--dark-text-color);
-
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
 .advantages-title {
+  margin-bottom: 20px;
+
   color: var(--dark-text-color);
 
   font-family: var(--secondary-font);
@@ -476,18 +488,6 @@ ul {
   background-color: var(--masters-bgc);
   max-width: 1280px;
   margin: 0 auto;
-}
-
-.masters-suptitle {
-  margin-bottom: 20px;
-
-  color: var(--dark-text-color);
-
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .masters-title {
@@ -600,8 +600,18 @@ ul {
 }
 /* =================END GALLERY===================== */
 
-/* ===================CONTACTFORM====================== */
-.contact-form-title {
+/* ===================CONTACTS FORM====================== */
+.contacts-form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  background-color: var(--contacts-bgc);
+}
+
+.contacts-form > .container {
+  display: flex;
+}
+.contacts-form-title {
   color: var(--secondary-text-color);
 
   font-family: var(--secondary-font);
@@ -629,10 +639,12 @@ ul {
 .contact-btn:hover {
   background-color: var(--accent-text);
 }
-/* =================END CONTACT FORM==================== */
+/* =================END CONTACTS FORM==================== */
 
-/* ===================CONTACT INFO===================== */
+/* ===================CONTACTS INFO===================== */
 .contacts-title {
+  margin-bottom: 40px;
+
   color: var(--secondary-text-color);
 
   font-family: var(--secondary-font);
@@ -640,6 +652,10 @@ ul {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+}
+
+.address {
+  margin-bottom: 70px;
 }
 
 .contacts-map,
@@ -653,7 +669,15 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.contacts-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--middle-text-color);
+}
+
 .contacts-text {
+  margin-bottom: 20px;
+  
   color: var(--secondary-text-color);
 
   font-weight: 600;
@@ -662,16 +686,27 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-/* ================END CONTACT INFO================ */
+/* ================END CONTACTS INFO================ */
 
 /* =================== FOOTER======================= */
-.footer {
+.footer > .container {
+  display: flex;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-copyright {
   color: var(--middle-text-color);
 
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+}
+
+.footer-list {
+  display: flex;
+  margin-left: auto;
 }
 
 .footer-link {
