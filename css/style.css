@@ -123,6 +123,11 @@ ul {
   color: var(--secondary-text-color);
 }
 
+.animate__zoomIn:hover,
+.animate__zoomIn:focus {
+  animation-duration: 4s;
+}
+
 .suptitle {
   display: flex;
   align-items: center;
@@ -706,6 +711,7 @@ ul {
   text-align: center;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  cursor: pointer;
 
   transition: background-color 250ms linear;
 }
