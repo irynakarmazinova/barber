@@ -47,7 +47,9 @@
         <a class="header-tel link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button class="main-btn" type="button">онлайн-запись</button>
+        <button class="main-btn" type="button" data-modal-open>
+          онлайн-запись
+        </button>
       </div>
     </header>
 
@@ -133,7 +135,7 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="main-btn btn-send" type="button">
+            <button class="main-btn btn-send" type="button" data-modal-open>
               онлайн-запись
             </button>
           </div>
@@ -186,7 +188,9 @@
             </ul>
           </div>
           <div class="price-btn">
-            <button class="main-btn" type="button">онлайн-запись</button>
+            <button class="main-btn" type="button" data-modal-open>
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
@@ -446,7 +450,9 @@
             <!-- <form action="">имя*</form>
             <form action="">имя*</form>
             <form action="">имя*</form> -->
-            <button class="contact-btn" type="button">отправить</button>
+            <button class="contact-btn" type="button" data-modal-open>
+              отправить
+            </button>
           </div>
 
           <!-- CONTACTS INFO -->
@@ -526,5 +532,21 @@
         </ul>
       </div>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО ОНЛАЙН-ЗАПИСЬ -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close></button>
+      </div>
+    </div>
+    <!-- МОДАЛЬНОЕ ОКНО ОТПРАВИТЬ В ФУТЕРЕ -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close></button>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
