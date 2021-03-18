@@ -4,14 +4,6 @@
 3. шрифт
 4. анимирование */
 
-/* потом удалить-фон */
-.header,
-.contact-form,
-.contacts {
-  background-color: rgb(218, 218, 218);
-}
-/* потом удалить-фон */
-
 /* ===================COMPONENTS======================== */
 :root {
   --main-font: 'Open Sans', sans-serif;
@@ -109,6 +101,8 @@ ul {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+
+  transition: background-color 250ms linear;
 }
 
 .main-btn:hover,
@@ -120,6 +114,8 @@ ul {
 
 .btn-send {
   color: var(--dark-text-color);
+
+  transition: color 250ms linear, background-color 250ms linear;
 }
 
 .btn-send:hover,
@@ -170,7 +166,6 @@ ul {
 
 .dash-sns::before {
   display: inline-block;
-  flex-shrink: 0;
   content: '';
   width: 60px;
   height: 1px;
@@ -180,6 +175,11 @@ ul {
 }
 /* ================END COMPONENTS====================== */
 /* =====================HEADER=========================*/
+.header {
+  position: absolute;
+  width: 100%;
+}
+
 .header > .container {
   display: flex;
   align-items: center;
@@ -212,6 +212,8 @@ ul {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+
+  transition: color 250ms linear;
 }
 
 .header-tel {
@@ -226,6 +228,8 @@ ul {
   line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
+  transition: color 250ms linear;
 }
 
 .header-tel:hover,
@@ -236,32 +240,37 @@ ul {
 /* ================= END HEADER=====================*/
 
 /* ===================== HERO ===================== */
-.hero {
+.hero .container {
   display: flex;
-
-  width: 1280px;
-  margin: 0 auto;
-  height: 680px;
-
-  outline: 1px solid tomato;
 }
 
 .hero-left-size {
-  width: 155px;
-  outline: 1px solid tomato;
+  display: flex;
+  align-items: flex-end;
+  width: 100px;
 }
 
 .hero-list-sns {
   display: flex;
+  align-items: baseline;
+
+  transform: rotate(-90deg);
+  transform-origin: left top;
 }
 
 .hero-link {
+  display: flex;
+  padding-top: 27px;
+  padding-bottom: 58px;
+
   color: var(--dark-text-color);
 
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
+  transition: color 250ms linear;
 }
 
 .header-link:hover,
@@ -275,7 +284,7 @@ ul {
 
 .hero-right-size {
   flex-grow: 1;
-  padding-top: 206px;
+  padding-top: 272px;
   padding-bottom: 206px;
   padding-left: 100px;
 
@@ -287,6 +296,11 @@ ul {
     url(../images/hero.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero-right-size-box {
+  width: 500px;
+  height: 202px;
 }
 
 .hero-title {
@@ -302,6 +316,7 @@ ul {
 }
 
 .hero-subtitle {
+  display: inline-block;
   color: var(--middle-text-color);
 
   font-size: 18px;
@@ -433,6 +448,12 @@ ul {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+}
+
+.price-item-left,
+.price-item-right {
+  display: flex;
+  justify-content: space-between;
 }
 
 .price-item-left:not(:last-child),
@@ -602,6 +623,8 @@ ul {
   fill: var(--dark-text-color);
   background-color: var(--secondary-text-color);
   border-radius: 50%;
+
+  transition: fill 250ms linear;
 }
 
 .masters-link-icon:hover,
@@ -671,6 +694,8 @@ ul {
 
 .contact-btn {
   border: 1px solid var(--accent-text);
+  border-radius: 25px;
+  padding: 12px 28px;
 
   color: var(--secondary-text-color);
   background-color: transparent;
@@ -681,6 +706,8 @@ ul {
   text-align: center;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
+  transition: background-color 250ms linear;
 }
 
 .contact-btn:focus,
@@ -690,10 +717,13 @@ ul {
 /* =================END CONTACTS FORM==================== */
 
 /* ===================CONTACTS INFO===================== */
-/* .contacts-right-side {
-  width: 625px;
-  height: 644px;
-} */
+.contacts-right-side {
+  margin-left: auto;
+  padding-left: 100px;
+  padding-right: 200px;
+
+  background-image: url(../images/contacts-form.png);
+}
 .contacts-title {
   margin-bottom: 40px;
 
@@ -761,11 +791,12 @@ ul {
 /* =================== FOOTER======================= */
 .footer > .container {
   display: flex;
-  padding-top: 56px;
-  padding-bottom: 56px;
 }
 
 .footer-copyright {
+  padding-top: 56px;
+  padding-bottom: 56px;
+
   color: var(--middle-text-color);
 
   font-weight: 600;
@@ -777,14 +808,20 @@ ul {
 .footer-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .footer-link {
+  padding-top: 56px;
+  padding-bottom: 56px;
+
   color: var(--dark-text-color);
 
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
+  transition: color 250ms linear;
 }
 /* ===================END FOOTER===================== */
