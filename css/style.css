@@ -179,6 +179,67 @@ ul {
   background-color: var(--dark-text-color);
 }
 /* ================END COMPONENTS====================== */
+
+/* ================MODAL WINOW====================== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transform: scale(1);
+  transition: transform 400ms ease-out;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: scale(0);
+  transition: transform 400ms ease-out;
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--secondary-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .close-btn-icon {
+  fill: var(--contacts-bgc);
+} */
+/* ================END MODAL WINOW====================== */
+
 /* =====================HEADER=========================*/
 .header {
   position: absolute;
@@ -262,6 +323,11 @@ ul {
   transform: rotate(-90deg);
   transform-origin: left top;
 }
+
+/* .hero-list-sns .hero-item-sns:before {
+  content: '';
+  transform-origin: left top;
+} */
 
 .hero-link {
   display: flex;
@@ -466,6 +532,15 @@ ul {
   margin-bottom: 20px;
 }
 
+/* .price-name:after {
+  display: inline-block;
+  content: '';
+  width: 60px;
+  height: 1px;
+  margin-left: 40px;
+
+  background-color: rgba(157, 164, 189, 0.12);
+} */
 .price-btn {
   text-align: center;
 }
@@ -660,14 +735,26 @@ ul {
   display: flex;
 }
 
-.gallery-item {
+/* .gallery-item {
   flex-basis: calc((100% -90px) / 4);
   margin-right: 30px;
 }
 
 .gallery-item:nth-child(4n) {
   margin-right: 0;
+} */
+
+.gallery-item {
+  margin-right: 30px;
 }
+
+.slick-next:before,
+.slick-prev:before {
+  color: var(--dash-dark);
+  font-size: 30px;
+  opacity: 1;
+}
+
 /* =================END GALLERY===================== */
 
 /* ===================CONTACTS FORM====================== */
@@ -755,9 +842,12 @@ ul {
   margin-bottom: 20px;
 }
 
-.contacts-map,
-.contacts-tel,
-.contacts-mail,
+.contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-link,
 .contacts-time {
   color: var(--middle-text-color);
 
@@ -766,11 +856,9 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.contacts-map,
-.contacts-tel,
-.contacts-mail {
-  display: flex;
-  align-items: center;
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-text);
 }
 
 .contacts-icon {
