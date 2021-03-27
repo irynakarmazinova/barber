@@ -539,9 +539,45 @@
         <div class="container">
           <div class="contacts-left-side section">
             <h2 class="contacts-form-title">Онлайн-запись</h2>
-            <!-- <form action="">имя*</form>
-            <form action="">имя*</form>
-            <form action="">имя*</form> -->
+            <form action="#">
+              <div class="contacts-form-box">
+                <div class="contacts-form-box-name">
+                  <input
+                    class="contacts-form-input contacts-form-input-name"
+                    type="text"
+                    name="user-name"
+                    id="contacts-user-name"
+                  />
+                  <label class="contacts-form-label" for="contacts-user-name"
+                    >Имя*
+                  </label>
+                </div>
+
+                <div class="contacts-form-box-tel">
+                  <input
+                    class="contacts-form-input contacts-form-input-tel"
+                    type="tel"
+                    name="user-tel"
+                    id="contacts-user-tel"
+                  />
+                  <label class="contacts-form-label" for="contacts-user-tel"
+                    >Телефон*
+                  </label>
+                </div>
+              </div>
+
+              <div class="contacts-form-b ox-massage">
+                <textarea
+                  class="contacts-form-input contacts-form-textarea"
+                  type="text"
+                  name="user-massage"
+                  id="contacts-user-massage"
+                ></textarea>
+                <label class="contacts-form-label" for="contacts-user-massage"
+                  >сообщение
+                </label>
+              </div>
+            </form>
             <button
               class="contact-btn animate__zoomIn"
               type="button"
@@ -629,12 +665,84 @@
       </div>
     </footer>
 
-    <!-- MODAL WINOW -->
+    <!-- МОДАЛЬНОЕ ОКНО -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-btn" type="button" data-modal-close>
+        <div class="modal-box">
+          <b class="modal-text">Оставьте свои данные, мы вам перезвоним</b>
+          <form class="modal-form" action="#">
+            <label class="modal-label label-mb"
+              >Имя
+              <input class="modal-input" type="text" name="modal-user-name" />
+              <svg class="modal-icon">
+                <use href="./images/symbol-defs.svg#icon-person-black"></use>
+              </svg>
+            </label>
+            <label class="modal-label label-mb"
+              >Телефон
+              <input
+                class="modal-input"
+                type="tel"
+                name="modal-user-phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="093-629-70-70"
+              />
+              <svg class="modal-icon">
+                <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+              </svg>
+            </label>
+            <label class="modal-label label-mb"
+              >Почта
+              <input
+                class="modal-input"
+                type="email"
+                name="modal-user-mail"
+                autocomplete="off"
+              />
+              <svg class="modal-icon">
+                <use href="./images/symbol-defs.svg#icon-email-black"></use>
+              </svg>
+            </label>
+            <label class="modal-label textarea-mb"
+              >Комментарий
+              <textarea
+                class="modal-textarea"
+                name="modal-user-comment"
+                placeholder="Введите текст"
+              ></textarea>
+            </label>
+
+            <!-- checkbox -->
+            <div class="checkbox">
+              <input
+                class="modal-checkbox visually-hidden"
+                id="user-choice"
+                type="checkbox"
+                name="agreement"
+              />
+              <svg class="modal-agreement-icon" width="16" height="15">
+                <use href="./images/symbol-defs.svg#icon-icon-check"></use>
+              </svg>
+              <label for="user-choice" class="modal-agreement">
+                Соглашаюсь с рассылкой и принимаю&nbsp;<a
+                  class="modal-agreement-link"
+                  href="#"
+                  >Условия договора</a
+                >
+              </label>
+            </div>
+            <button
+              type="submit"
+              type="reset"
+              class="main-btn btn-send modal-btn animate__pulse"
+            >
+              Отправить
+            </button>
+          </form>
+        </div>
+        <button type="submit" class="close-btn" data-modal-close>
           <svg class="close-btn-icon" width="11" height="11">
-            <use class="" href="./images/symbol-defs.svg#icon-close-btn"></use>
+            <use href="./images/symbol-defs.svg#icon-close-btn"></use>
           </svg>
         </button>
       </div>
