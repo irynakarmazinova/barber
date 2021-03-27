@@ -946,8 +946,10 @@ ul {
   letter-spacing: 0.05em;
 }
 
-.contacts-form-box {
+.contacts-form-box,
+.contacts-form-box-massage {
   display: flex;
+  margin-bottom: 44px;
 }
 
 .contacts-form-box-name,
@@ -955,12 +957,7 @@ ul {
 .contacts-form-box-massage {
   position: relative;
   display: flex;
-  margin-bottom: 44px;
-
-  display: flex;
   align-items: center;
-
-  margin-bottom: 44px;
 }
 
 .contacts-form-box-name {
