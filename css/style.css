@@ -341,13 +341,13 @@ ul {
   background-origin: border-box;
 }
 
-.modal-checkbox:focus + .modal-agreement-icon {
+/* .modal-checkbox:focus + .modal-agreement-icon {
+  border-color: var(--accent-text);
+} */
+
+.modal-checkbox:focus-visible + .modal-agreement::before {
   border-color: var(--accent-text);
 }
-
-/* .modal-checkbox:focus-visible + .modal-agreement::before {
-  border-color: black;
-} */
 
 .modal-agreement {
   font-size: 14px;
@@ -491,8 +491,8 @@ ul {
 
 .hero-link {
   display: flex;
-  padding-top: 27px;
-  padding-bottom: 58px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 
   color: var(--dark-text-color);
 
@@ -789,10 +789,6 @@ ul {
   margin: 0 auto;
 }
 
-.masters-suptitle {
-  margin-bottom: 44px;
-}
-
 .masters-title {
   margin-bottom: 44px;
 
@@ -879,20 +875,13 @@ ul {
 /* =================END MASTERS======================= */
 
 /* ====================GALLERY===================== */
-.gallery-subtitle {
-  margin-bottom: 40px;
-
-  color: var(--dark-text-color);
-
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.gallery-suptitle {
+  margin-bottom: 44px;
 }
 
 .gallery-list {
   display: flex;
+  margin: -15px;
 }
 
 /* .gallery-item {
@@ -905,7 +894,11 @@ ul {
 } */
 
 .gallery-item {
-  margin-right: 30px;
+  margin: 15px;
+}
+
+.slick-prev {
+  left: -30px;
 }
 
 .slick-next:before,
