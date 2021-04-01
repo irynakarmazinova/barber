@@ -1,14 +1,7 @@
-/* 
-1. позиционирование
-2. цвет
-3. шрифт
-4. анимирование */
-
-/* ===================COMPONENTS======================== */
+@charset "UTF-8";
 :root {
   --main-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
-
   --main-text-color: #555555;
   --secondary-text-color: #ffffff;
   --accent-text: #ff6c00;
@@ -16,10 +9,21 @@
   --suptitle-text-color: rgba(157, 164, 189, 0.6);
   --middle-text-color: #9da4bd;
   --dash-dark: rgba(157, 164, 189, 0.6);
-
   --price-bgc: #111319;
   --masters-bgc: #f7f7f7;
   --contacts-bgc: #191c26;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 body {
@@ -57,16 +61,6 @@ ul {
   font-style: normal;
 }
 
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -89,20 +83,16 @@ ul {
 .main-btn {
   padding: 12px 20px;
   min-width: 160px;
-
   border-radius: 25px;
   border: 1px solid var(--accent-text);
-
   color: var(--secondary-text-color);
   background-color: transparent;
-
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
-
   transition: background-color 250ms linear;
 }
 
@@ -114,7 +104,6 @@ ul {
 
 .btn-send {
   color: var(--dark-text-color);
-
   transition: color 250ms linear, background-color 250ms linear;
 }
 
@@ -132,7 +121,6 @@ ul {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -143,6 +131,7 @@ ul {
 .suptitle-light {
   color: var(--suptitle-text-color);
 }
+
 .suptitle-dark {
   color: var(--dark-text-color);
 }
@@ -154,7 +143,6 @@ ul {
   width: 60px;
   height: 1px;
   margin-right: 20px;
-
   background-color: var(--dash-dark);
 }
 
@@ -165,7 +153,6 @@ ul {
   width: 60px;
   height: 1px;
   margin-right: 20px;
-
   background-color: var(--dark-text-color);
 }
 
@@ -175,12 +162,9 @@ ul {
   width: 60px;
   height: 1px;
   margin-right: 40px;
-
   background-color: var(--dark-text-color);
 }
-/* ================END COMPONENTS====================== */
 
-/* ======================MODAL WINDOW=================== */
 .backdrop {
   position: fixed;
   z-index: 2;
@@ -188,9 +172,7 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
-
   background-color: rgba(0, 0, 0, 0.2);
-
   opacity: 1;
   transform: scale(1);
   transition: transform 400ms ease-out;
@@ -200,7 +182,6 @@ ul {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transform: scale(0);
   transition: transform 400ms ease-out;
 }
@@ -209,18 +190,38 @@ ul {
   position: absolute;
   min-width: 528px;
   min-height: 581px;
-
   background-color: var(--secondary-text-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 400ms ease-out;
 }
 
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover, .close-btn:focus {
+  fill: var(--accent-text);
+}
+
+/* .close-btn-icon {
+  fill: var(--logo-text-color);
+} */
 .modal-box {
   margin: 40px;
 }
@@ -228,7 +229,6 @@ ul {
 .modal-text {
   display: block;
   margin-bottom: 12px;
-
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -243,11 +243,9 @@ ul {
 
 .modal-label {
   position: relative;
-
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-
   color: var(--main-text-color);
 }
 
@@ -259,15 +257,11 @@ ul {
 .modal-textarea {
   margin-top: 4px;
   padding-left: 42px;
-
   width: 100%;
   height: 40px;
-
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  cursor: pointer;
-
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -284,11 +278,9 @@ ul {
   position: absolute;
   top: 50%;
   left: 12px;
-
   width: 18px;
   height: 18px;
   fill: var(--dark-text-color);
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -298,11 +290,9 @@ ul {
 
 .modal-textarea {
   padding: 12px 16px;
-
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
-
   width: 100%;
   height: 120px;
   resize: none;
@@ -315,13 +305,11 @@ ul {
 .checkbox {
   display: flex;
   align-items: center;
-
   margin-bottom: 30px;
 }
 
 .modal-agreement-icon {
   margin-right: 7px;
-
   border-radius: 2px;
   border: 2px solid var(--dark-text-color);
 }
@@ -333,7 +321,6 @@ ul {
 /* для оформления чекбокса-нужно инлайн свг */
 /* transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 2500sms cubic-bezier(0.4, 0, 0.2, 1); */
-
 .modal-checkbox:checked + .modal-agreement-icon {
   background-color: var(--accent-text);
   border-color: transparent;
@@ -344,7 +331,6 @@ ul {
 /* .modal-checkbox:focus + .modal-agreement-icon {
   border-color: var(--accent-text);
 } */
-
 .modal-checkbox:focus-visible + .modal-agreement::before {
   border-color: var(--accent-text);
 }
@@ -353,9 +339,7 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: var(--main-text-color);
-
   cursor: pointer;
 }
 
@@ -372,35 +356,6 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.close-btn {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-
-  background-color: transparent;
-
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* .close-btn-icon {
-  fill: var(--logo-text-color);
-} */
-
-.close-btn:hover,
-.close-btn:focus {
-  fill: var(--accent-text);
-}
-/* ======================END MODAL WINDOW=================== */
-/* =====================HEADER=========================*/
 .header {
   position: absolute;
   width: 100%;
@@ -431,14 +386,11 @@ ul {
 
 .header-link {
   padding: 52px 0;
-
   color: var(--secondary-text-color);
-
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-
   transition: color 250ms linear;
 }
 
@@ -446,15 +398,12 @@ ul {
   margin-left: auto;
   margin-right: 40px;
   padding: 52px 0;
-
   color: var(--secondary-text-color);
-
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   transition: color 250ms linear;
 }
 
@@ -463,9 +412,6 @@ ul {
   color: var(--accent-text);
 }
 
-/* ================= END HEADER=====================*/
-
-/* ===================== HERO ===================== */
 .hero .container {
   display: flex;
 }
@@ -479,7 +425,6 @@ ul {
 .hero-list-sns {
   display: flex;
   align-items: baseline;
-
   transform: rotate(-90deg);
   transform-origin: left top;
 }
@@ -488,19 +433,15 @@ ul {
   content: '';
   transform-origin: left top;
 } */
-
 .hero-link {
   display: flex;
   padding-top: 17px;
   padding-bottom: 17px;
-
   color: var(--dark-text-color);
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-
   transition: color 250ms linear;
 }
 
@@ -518,13 +459,8 @@ ul {
   padding-top: 272px;
   padding-bottom: 206px;
   padding-left: 100px;
-
   background-color: var(--price-bgc);
-  background-image: linear-gradient(
-      rgba(25, 28, 38, 0.2),
-      rgba(25, 28, 38, 0.2)
-    ),
-    url(../images/hero.svg);
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -536,9 +472,7 @@ ul {
 
 .hero-title {
   margin-bottom: 20px;
-
   color: var(--secondary-text-color);
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 72px;
@@ -549,14 +483,11 @@ ul {
 .hero-subtitle {
   display: inline-block;
   color: var(--middle-text-color);
-
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
-/*================= END HERO===================== */
 
-/* ================= ABOUTUS===================== */
 .about > .container {
   display: flex;
 }
@@ -576,9 +507,7 @@ ul {
 
 .about-title {
   margin-bottom: 20px;
-
   color: var(--dark-text-color);
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 42px;
@@ -588,9 +517,7 @@ ul {
 
 .about-subtitle {
   margin-bottom: 20px;
-
   color: var(--main-text-color);
-
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -598,17 +525,12 @@ ul {
 
 .about-text {
   margin-bottom: 40px;
-
   color: var(--main-text-color);
-
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
 }
 
-/* ================= END ABOUTUS=====================*/
-
-/* =====================PRICE======================== */
 .price {
   background-color: var(--price-bgc);
   background-image: url(../images/price.png);
@@ -619,9 +541,7 @@ ul {
 
 .price-title {
   margin-bottom: 44px;
-
   color: var(--secondary-text-color);
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 42px;
@@ -631,7 +551,6 @@ ul {
 
 .price-box {
   display: flex;
-
   margin-bottom: 50px;
 }
 
@@ -650,21 +569,12 @@ ul {
     rgba(9, 11, 19, 0.2) 100%
   );
 } */
-
 .price-list-left:nth-child(2n + 1) {
-  background-image: linear-gradient(
-    180deg,
-    #171a24 0%,
-    rgba(23, 26, 36, 0.2) 100%
-  );
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
 .price-list-right:nth-child(2n) {
-  background-image: linear-gradient(
-    180deg,
-    #090b13 0%,
-    rgba(9, 11, 19, 0.2) 100%
-  );
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-list-left,
@@ -672,9 +582,7 @@ ul {
   width: 585px;
   height: 240px;
   padding: 30px 40px;
-
   color: var(--middle-text-color);
-
   font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
@@ -704,9 +612,7 @@ ul {
 .price-btn {
   text-align: center;
 }
-/* ================= END PRICE=====================*/
 
-/* ================= ADVANTAGES===================== */
 .advantages > .container {
   display: flex;
 }
@@ -726,10 +632,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 170px;
   height: 133px;
-
   background-color: var(--masters-bgc);
 }
 
@@ -742,9 +646,9 @@ ul {
   width: 122px;
   height: 93px;
 }
+
 .advantages-number {
   color: var(--dark-text-color);
-
   font-weight: bold;
   font-size: 42px;
   line-height: 1.36;
@@ -754,7 +658,6 @@ ul {
 
 .advantages-text {
   color: var(--dark-text-color);
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -763,9 +666,7 @@ ul {
 
 .advantages-title {
   margin-bottom: 20px;
-
   color: var(--dark-text-color);
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 42px;
@@ -775,14 +676,11 @@ ul {
 
 .advantages-subtitle {
   color: var(--main-text-color);
-
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
-/*  ==============END ADVANTAGES===================== */
 
-/*  =================== MASTERS======================= */
 .masters {
   background-color: var(--masters-bgc);
   max-width: 1280px;
@@ -791,9 +689,7 @@ ul {
 
 .masters-title {
   margin-bottom: 44px;
-
   color: var(--dark-text-color);
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 42px;
@@ -817,11 +713,10 @@ ul {
 .masters-box {
   padding-top: 30px;
 }
+
 .masters-name {
   margin-bottom: 8px;
-
   color: var(--dark-text-color);
-
   font-size: 18px;
   line-height: 1.39;
   text-align: center;
@@ -830,9 +725,7 @@ ul {
 
 .masters-job {
   margin-bottom: 30px;
-
   color: var(--accent-text);
-
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
@@ -855,11 +748,9 @@ ul {
   align-items: center;
   width: 44px;
   height: 44px;
-
   fill: var(--dark-text-color);
   background-color: var(--secondary-text-color);
   border-radius: 50%;
-
   transition: fill 250ms linear;
 }
 
@@ -872,9 +763,7 @@ ul {
   width: 20px;
   height: 20px;
 }
-/* =================END MASTERS======================= */
 
-/* ====================GALLERY===================== */
 .gallery-suptitle {
   margin-bottom: 44px;
 }
@@ -892,7 +781,6 @@ ul {
 .gallery-item:nth-child(4n) {
   margin-right: 0;
 } */
-
 .gallery-item {
   margin: 15px;
 }
@@ -908,9 +796,6 @@ ul {
   opacity: 1;
 }
 
-/* =================END GALLERY===================== */
-
-/* ===================CONTACTS FORM====================== */
 .contacts-form {
   margin-left: auto;
   margin-right: auto;
@@ -926,12 +811,9 @@ ul {
   width: 625px;
   height: 644px;
 } */
-
 .contacts-form-title {
   margin-bottom: 44px;
-
   color: var(--secondary-text-color);
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 42px;
@@ -960,6 +842,7 @@ ul {
 .contacts-form-input-name {
   width: 270px;
 }
+
 .contacts-form-input-tel {
   width: 260px;
 }
@@ -967,17 +850,12 @@ ul {
 .contacts-form-input {
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-
   background-color: transparent;
-
+  color: var(--secondary-text-color);
   cursor: pointer;
 }
 
-.contacts-form-input:hover + .contacts-form-label {
-  color: var(--secondary-text-color);
-}
-
-.contacts-form-input:focus {
+.contacts-form-input:hover + .contacts-form-input {
   color: var(--secondary-text-color);
 }
 
@@ -985,17 +863,19 @@ ul {
   border-bottom: 1px solid var(--secondary-text-color);
 }
 
+.contacts-form-input:focus + .contacts-form-label {
+  transform: translateY(-30%);
+}
+
 .contacts-form-label {
   position: absolute;
   top: 0;
   left: 0;
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   color: rgba(157, 164, 189, 0.4);
 }
 
@@ -1009,10 +889,8 @@ ul {
   border: 1px solid var(--accent-text);
   border-radius: 25px;
   padding: 12px 28px;
-
   color: var(--secondary-text-color);
   background-color: transparent;
-
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -1020,7 +898,6 @@ ul {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
-
   transition: background-color 250ms linear;
 }
 
@@ -1028,21 +905,19 @@ ul {
 .contact-btn:hover {
   background-color: var(--accent-text);
 }
-/* =================END CONTACTS FORM==================== */
 
+/* =================END CONTACTS FORM==================== */
 /* ===================CONTACTS INFO===================== */
 .contacts-right-side {
   margin-left: auto;
   padding-left: 100px;
   padding-right: 200px;
-
   background-image: url(../images/contacts-form.png);
 }
+
 .contacts-title {
   margin-bottom: 40px;
-
   color: var(--secondary-text-color);
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 42px;
@@ -1071,7 +946,6 @@ ul {
 .contacts-link,
 .contacts-time {
   color: var(--middle-text-color);
-
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
@@ -1086,24 +960,20 @@ ul {
   margin-right: 16px;
   width: 24px;
   height: 24px;
-
   fill: currentColor;
 }
 
 .contacts-text {
   margin-bottom: 20px;
-
   color: var(--secondary-text-color);
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-/* ================END CONTACTS INFO================ */
 
-/* =================== FOOTER======================= */
+/* ================END CONTACTS INFO================ */
 .footer > .container {
   display: flex;
 }
@@ -1111,9 +981,7 @@ ul {
 .footer-copyright {
   padding-top: 56px;
   padding-bottom: 56px;
-
   color: var(--middle-text-color);
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -1129,14 +997,11 @@ ul {
 .footer-link {
   padding-top: 56px;
   padding-bottom: 56px;
-
   color: var(--dark-text-color);
-
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-
   transition: color 250ms linear;
 }
-/* ===================END FOOTER===================== */
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,32 @@
+.gallery-suptitle {
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  margin: -15px;
+}
+
+/* .gallery-item {
+  flex-basis: calc((100% -90px) / 4);
+  margin-right: 30px;
+}
+
+.gallery-item:nth-child(4n) {
+  margin-right: 0;
+} */
+
+.gallery-item {
+  margin: 15px;
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: var(--dash-dark);
+  font-size: 30px;
+  opacity: 1;
+}

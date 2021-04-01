@@ -1,0 +1,35 @@
+.footer > .container {
+  display: flex;
+}
+
+.footer-copyright {
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  color: var(--middle-text-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+
+.footer-list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.footer-link {
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  color: var(--dark-text-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  transition: color 250ms linear;
+}
