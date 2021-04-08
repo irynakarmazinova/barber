@@ -1,0 +1,24 @@
+.title {
+  margin-bottom: 20px;
+
+  color: var(--dark-text-color);
+
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+}
+
+.price-title {
+  @extend .title;
+  margin-bottom: 44px;
+
+  color: var(--secondary-text-color);
+}
+.title-masters {
+  @extend .title;
+  margin-bottom: 44px;
+
+  color: var(--dark-text-color);
+}

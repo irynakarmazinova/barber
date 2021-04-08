@@ -1,0 +1,20 @@
+.suptitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.suptitle_light {
+  @extend .suptitle;
+  color: var(--suptitle-text-color);
+}
+.suptitle_dark {
+  @extend .suptitle;
+  color: var(--dark-text-color);
+}

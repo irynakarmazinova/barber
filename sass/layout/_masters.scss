@@ -4,29 +4,17 @@
   margin: 0 auto;
 }
 
-.masters-title {
-  margin-bottom: 44px;
-
-  color: var(--dark-text-color);
-
-  font-family: var(--secondary-font);
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
-}
-
 .masters-list {
   display: flex;
 }
 
-.masters-item {
+.masters-list__item {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
-}
 
-.masters-item:nth-child(3n) {
-  margin-right: 0;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .masters-box {

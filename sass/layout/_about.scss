@@ -1,13 +1,11 @@
-.about > .container {
-  display: flex;
-}
-
 .about-list {
   display: flex;
 }
 
-.about-item:not(:last-child) {
-  margin-right: 30px;
+.about-list__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .about-box {
@@ -15,29 +13,7 @@
   margin-left: 64px;
 }
 
-.about-title {
-  margin-bottom: 20px;
-
-  color: var(--dark-text-color);
-
-  font-family: var(--secondary-font);
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 49px;
-  letter-spacing: 0.05em;
-}
-
-.about-subtitle {
-  margin-bottom: 20px;
-
-  color: var(--main-text-color);
-
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-}
-
-.about-text {
+.about-description {
   margin-bottom: 40px;
 
   color: var(--main-text-color);

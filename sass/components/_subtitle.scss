@@ -1,0 +1,19 @@
+.subtitle {
+  display: inline-block;
+  color: var(--middle-text-color);
+
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.subtitle-about {
+  @extend .subtitle;
+  margin-bottom: 20px;
+
+  color: var(--main-text-color);
+}
+.subtitle-advantages {
+  @extend .subtitle;
+  color: var(--main-text-color);
+}

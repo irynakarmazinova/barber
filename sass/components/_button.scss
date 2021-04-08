@@ -1,0 +1,43 @@
+.main-btn {
+  padding: 12px 20px;
+  min-width: 160px;
+
+  border-radius: 25px;
+  border: 1px solid var(--accent-text);
+
+  color: var(--secondary-text-color);
+  background-color: transparent;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-text);
+    border: 1px solid var(--accent-text);
+  }
+}
+
+// кнопка price
+.main-btn_flex {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn-send {
+  color: var(--dark-text-color);
+
+  transition: color 250ms linear, background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-text-color);
+  }
+}
