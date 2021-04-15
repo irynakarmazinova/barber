@@ -4,6 +4,12 @@
   }
 }
 
+.flex-advantages {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
 .header_center {
   @extend .flex;
   align-items: center;

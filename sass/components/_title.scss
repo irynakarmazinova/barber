@@ -1,4 +1,16 @@
 .title {
+  margin-bottom: 33px;
+  @include font(700, 42px, 49px, 0.05em);
+  font-family: var(--secondary-font);
+
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 44px;
+  }
+}
+
+.title-about {
   margin-bottom: 20px;
 
   @include font(700, 28px, 33px, 0.05em);
@@ -11,16 +23,11 @@
   }
 }
 
-.title-price {
-  margin-bottom: 33px;
-  @include font(700, 42px, 49px, 0.05em);
-  font-family: var(--secondary-font);
+.title-advantages {
+  @extend .title;
+  margin-bottom: 20px;
 
-  color: var(--secondary-text-color);
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 44px;
-  }
+  color: var(--dark-text-color);
 }
 
 .title-masters {
