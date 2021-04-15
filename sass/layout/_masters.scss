@@ -20,7 +20,7 @@
 .masters-box {
   padding-top: 30px;
 }
-.masters-name {
+.masters-box__name {
   margin-bottom: 8px;
 
   color: var(--dark-text-color);
@@ -31,7 +31,7 @@
   letter-spacing: 0.02em;
 }
 
-.masters-job {
+.masters-box__job {
   margin-bottom: 30px;
 
   color: var(--accent-text);
@@ -40,38 +40,4 @@
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
-}
-
-.masters-list-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.masters-item-icon:not(:last-child) {
-  margin-right: 10px;
-}
-
-.masters-link-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-
-  fill: var(--dark-text-color);
-  background-color: var(--secondary-text-color);
-  border-radius: 50%;
-
-  transition: fill 250ms linear;
-}
-
-.masters-link-icon:hover,
-.masters-link-icon:focus {
-  fill: var(--accent-text);
-}
-
-.masters-icon {
-  width: 20px;
-  height: 20px;
 }
