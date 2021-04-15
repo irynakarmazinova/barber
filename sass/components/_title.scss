@@ -11,12 +11,18 @@
   }
 }
 
-.price-title {
-  @extend .title;
-  margin-bottom: 44px;
+.title-price {
+  margin-bottom: 33px;
+  @include font(700, 42px, 49px, 0.05em);
+  font-family: var(--secondary-font);
 
   color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 44px;
+  }
 }
+
 .title-masters {
   @extend .title;
   margin-bottom: 44px;

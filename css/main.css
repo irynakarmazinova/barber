@@ -150,7 +150,7 @@ ul {
   color: var(--secondary-text-color);
 }
 
-.title, .price-title, .title-masters {
+.title, .title-masters {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 28px;
@@ -161,7 +161,7 @@ ul {
 }
 
 @media screen and (min-width: 1200px) {
-  .title, .price-title, .title-masters {
+  .title, .title-masters {
     font-weight: 700;
     font-size: 42px;
     line-height: 1.17;
@@ -169,9 +169,20 @@ ul {
   }
 }
 
-.price-title {
-  margin-bottom: 44px;
+.title-price {
+  margin-bottom: 33px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  font-family: var(--secondary-font);
   color: var(--secondary-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .title-price {
+    margin-bottom: 44px;
+  }
 }
 
 .title-masters {
@@ -666,58 +677,121 @@ ul {
 
 .price {
   background-color: var(--price-bgc);
-  background-image: url(../images/price.png);
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1280px;
+  background-image: url(../images/mobile/price/img.png);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/mobile/price/img@2x.png");
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .price {
+    background-image: url(../images/tablet/price/img.png);
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/tablet/price/img@2x.png");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .price {
+    background-image: url(../images/desktop/price/img.png);
+    max-width: 1280px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url("../images/desktop/price/img@2x.png");
+  }
 }
 
 .price-box {
-  display: flex;
   margin-bottom: 50px;
-}
-
-/* .price-list-left {
-  background-image: linear-gradient(
-    180deg,
-    #171a24 0%,
-    rgba(23, 26, 36, 0.2) 100%
-  );
-}
-
-.price-list-right {
-  background-image: linear-gradient(
-    180deg,
-    #090b13 0%,
-    rgba(9, 11, 19, 0.2) 100%
-  );
-} */
-.price-list {
-  width: 585px;
-  height: 240px;
-  padding: 30px 40px;
-  color: var(--middle-text-color);
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-}
-
-.price-list-left:nth-child(2n + 1) {
+  padding: 30px 30px 10px;
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
-.price-list-right:nth-child(2n) {
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+@media screen and (min-width: 768px) {
+  .price-box {
+    padding: 30px 40px 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-box {
+    display: flex;
+    padding: 0;
+  }
+}
+
+.price-list {
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.14;
+  letter-spacing: 0.02em;
+  color: var(--middle-text-color);
+}
+
+@media screen and (max-width: 480px) {
+  .price-list {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .price-list {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-list {
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-list-left:nth-child(2n + 1) {
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-list-right:nth-child(2n) {
+    background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .price-list__item {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.price-list__item:not(:last-child) {
-  margin-bottom: 20px;
+@media screen and (min-width: 1200px) {
+  .price-list__item {
+    margin-bottom: 0;
+  }
+  .price-list__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .advantages-left-box {
