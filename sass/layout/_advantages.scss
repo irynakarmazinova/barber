@@ -1,5 +1,8 @@
-.advantages {
-  position: relative;
+.advantages_flex {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    position: relative;
+  }
 }
 
 .advantages-description-box {
@@ -24,8 +27,8 @@
 
   @media screen and (min-width: 1200px) {
     position: absolute;
-    top: 121;
-    left: 100;
+    top: 0px;
+    left: 100px;
   }
 }
 
@@ -34,6 +37,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+  }
 }
 
 .advantages-list__item {
@@ -46,14 +53,22 @@
 
   background-color: var(--masters-bgc);
 
-  &:nth-child(2n + 1) {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
-
   //   &:nth-child(-n + 2) {
   //   margin-bottom: 30px;
   // }
+
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .numbers-box {

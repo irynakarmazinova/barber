@@ -112,12 +112,6 @@ ul {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .flex-advantages {
-    display: flex;
-  }
-}
-
 .header_center {
   align-items: center;
 }
@@ -822,8 +816,11 @@ ul {
   }
 }
 
-.advantages {
-  position: relative;
+@media screen and (min-width: 1200px) {
+  .advantages_flex {
+    display: flex;
+    position: relative;
+  }
 }
 
 .advantages-description-box {
@@ -854,8 +851,8 @@ ul {
 @media screen and (min-width: 1200px) {
   .advantages-number-box {
     position: absolute;
-    top: 121;
-    left: 100;
+    top: 0px;
+    left: 100px;
   }
 }
 
@@ -864,6 +861,12 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 479px) {
+  .advantages-list {
+    flex-direction: column;
+  }
 }
 
 .advantages-list__item {
@@ -875,9 +878,17 @@ ul {
   background-color: var(--masters-bgc);
 }
 
-.advantages-list__item:nth-child(2n + 1) {
-  margin-right: 30px;
-  margin-bottom: 30px;
+@media screen and (max-width: 479px) {
+  .advantages-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .advantages-list__item:nth-child(2n + 1) {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .numbers-box {
@@ -905,21 +916,44 @@ ul {
 
 .masters {
   background-color: var(--masters-bgc);
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
-.masters-list {
-  display: flex;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .masters_flex {
+    display: flex;
+    flex-direction: column;
+    max-width: 528px;
+  }
 }
 
-.masters-list__item {
-  flex-basis: calc((100% - 60px) / 3);
-  margin-right: 30px;
+@media screen and (max-width: 1199) {
+  .masters-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.masters-list__item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .masters-list {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .masters-list__item:not(:last-child) {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .masters-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+    margin-right: 30px;
+  }
+  .masters-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .masters-box {

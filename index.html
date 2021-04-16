@@ -122,7 +122,7 @@
       <div class="container flex">
         <ul class="about-list list">
           <li class="about-list__item">
-            <picture class="about-list__picture">
+            <picture>
               <source
                 srcset="
                   ./images/desktop/about/img-1.webp    1x,
@@ -165,7 +165,7 @@
             </picture>
           </li>
           <li class="about-list__item">
-            <picture class="about-list__picture">
+            <picture>
               <source
                 srcset="
                   ./images/desktop/about/img-2.webp    1x,
@@ -291,7 +291,7 @@
 
     <!-- ADVANTAGES -->
     <section class="advantages section">
-      <div class="container flex-advantages">
+      <div class="container advantages_flex">
         <div class="advantages-description-box">
           <p class="suptitle suptitle_dark dash dash_dark">
             старая традиционная школа
@@ -345,161 +345,299 @@
 
     <!-- MASTERS -->
     <section class="masters section">
-        <div class="container">
-          <p class="suptitle suptitle_dark dash dash_dark">
-            для настоящих ценителей атмосферы
-          </p>
-          <h2 class="title title-masters">Наши мастера</h2>
-          <ul class="masters-list list">
-            <li class="masters-list__item">
-              <img
-                src="./images/masters/img-1.jpg"
-                alt="мастер стрижет клиента"
-                width="370"
-                height="346"
+      <div class="container masters_flex">
+        <p class="suptitle suptitle_dark dash dash_dark">
+          для настоящих ценителей атмосферы
+        </p>
+        <h2 class="title title-masters">Наши мастера</h2>
+        <ul class="masters-list list">
+          <li class="masters-list__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/desktop/masters/img1.webp    1x,
+                  ./images/desktop/masters/img1@2x.webp 2x
+                "
+                media="(min-width:1200px)"
+                type="image/webp"
+                sizes="(min-width:1200px) 370px"
               />
-              <div class="masters-box">
-                <h3 class="masters-box__name" lang="en">John Smith</h3>
-                <p class="masters-box__job" lang="en">Extreme Barber</p>
-                <ul class="social-links-icons list">
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-instagram"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-facebook"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-linkedin"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+              <source
+                srcset="
+                  ./images/desktop/masters/img1.jpg    1x,
+                  ./images/desktop/masters/img1@2x.jpg 2x
+                "
+                media="(min-width:1200px)"
+                sizes="(min-width:1200px) 370px"
+              />
 
-            <li class="masters-list__item">
-              <img
-                src="./images/masters/img-2.jpg"
-                alt="мастер стрижет клиента"
-                width="370"
-                height="346"
+              <source
+                srcset="
+                  ./images/tablet/masters/img1.webp    1x,
+                  ./images/tablet/masters/img1@2x.webp 2x
+                "
+                media="(min-width:768px)"
+                type="image/webp"
+                sizes="(min-width:768px) 450px"
               />
-              <div class="masters-box">
-                <h3 class="masters-box__name" lang="en">Michele Doe</h3>
-                <p class="masters-box__job" lang="en">Extreme Barber</p>
-                <ul class="social-links-icons list">
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-instagram"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-facebook"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-linkedin"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+              <source
+                srcset="
+                  ./images/tablet/about/img1.jpg    1x,
+                  ./images/tablet/about/img1@2x.jpg 2x
+                "
+                media="(min-width:768px)"
+                sizes="(min-width:768px) 450px"
+              />
+              <source
+                srcset="
+                  ./images/mobile/masters/img1.webp    1x,
+                  ./images/mobile/masters/img1@2x.webp 2x
+                "
+                media="(min-width:480px)"
+                type="image/webp"
+                sizes="(min-width:480px) 418px"
+              />
+              <source
+                srcset="
+                  ./images/mobile/about/img1.jpg    1x,
+                  ./images/mobile/about/img1@2x.jpg 2x
+                "
+                media="(min-width:480px)"
+                sizes="(min-width:480px) 418px"
+              />
+              <img
+                src="./images/mobile/masters/img1.jpg"
+                alt="мастер стрижет клиента"
+              />
+            </picture>
+            <div class="masters-box">
+              <h3 class="masters-box__name" lang="en">John Smith</h3>
+              <p class="masters-box__job" lang="en">Extreme Barber</p>
+              <ul class="social-links-icons list">
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
 
-            <li class="masters-list__item">
-              <img
-                src="./images/masters/img-3.jpg"
-                alt="мастер стрижет клиента"
-                width="370"
-                height="346"
+          <li class="masters-list__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/desktop/masters/img2.webp    1x,
+                  ./images/desktop/masters/img2@2x.webp 2x
+                "
+                media="(min-width:1200px)"
+                type="image/webp"
+                sizes="(min-width:1200px) 370px"
               />
-              <div class="masters-box">
-                <h3 class="masters-box__name" lang="en">Alan Black</h3>
-                <p class="masters-box__job" lang="en">Extreme Barber</p>
-                <ul class="social-links-icons list">
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-instagram"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-facebook"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-links-icons__item">
-                    <a class="social-links-icons__link" href="#">
-                      <svg class="social-links-icons__icon">
-                        <use
-                          href="./images/symbol-defs.svg#icon-linkedin"
-                        ></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+              <source
+                srcset="
+                  ./images/desktop/masters/img2.jpg    1x,
+                  ./images/desktop/masters/img2@2x.jpg 2x
+                "
+                media="(min-width:1200px)"
+                sizes="(min-width:1200px) 370px"
+              />
+
+              <source
+                srcset="
+                  ./images/tablet/masters/img2.webp    1x,
+                  ./images/tablet/masters/img2@2x.webp 2x
+                "
+                media="(min-width:768px)"
+                type="image/webp"
+                sizes="(min-width:768px) 450px"
+              />
+              <source
+                srcset="
+                  ./images/tablet/about/img2.jpg    1x,
+                  ./images/tablet/about/img2@2x.jpg 2x
+                "
+                media="(min-width:768px)"
+                sizes="(min-width:768px) 450px"
+              />
+              <source
+                srcset="
+                  ./images/mobile/masters/img2.webp    1x,
+                  ./images/mobile/masters/img2@2x.webp 2x
+                "
+                media="(min-width:480px)"
+                type="image/webp"
+                sizes="(min-width:480px) 418px"
+              />
+              <source
+                srcset="
+                  ./images/mobile/about/img2.jpg    1x,
+                  ./images/mobile/about/img2@2x.jpg 2x
+                "
+                media="(min-width:480px)"
+                sizes="(min-width:480px) 418px"
+              />
+              <img
+                src="./images/mobile/masters/img2.jpg"
+                alt="мастер стрижет клиента"
+              />
+            </picture>
+            <div class="masters-box">
+              <h3 class="masters-box__name" lang="en">Michele Doe</h3>
+              <p class="masters-box__job" lang="en">Extreme Barber</p>
+              <ul class="social-links-icons list">
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="masters-list__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/desktop/masters/img3.webp    1x,
+                  ./images/desktop/masters/img3@2x.webp 2x
+                "
+                media="(min-width:1200px)"
+                type="image/webp"
+                sizes="(min-width:1200px) 370px"
+              />
+              <source
+                srcset="
+                  ./images/desktop/masters/img3.jpg    1x,
+                  ./images/desktop/masters/img3@2x.jpg 2x
+                "
+                media="(min-width:1200px)"
+                sizes="(min-width:1200px) 370px"
+              />
+
+              <source
+                srcset="
+                  ./images/tablet/masters/img3.webp    1x,
+                  ./images/tablet/masters/img3@2x.webp 2x
+                "
+                media="(min-width:768px)"
+                type="image/webp"
+                sizes="(min-width:768px) 450px"
+              />
+              <source
+                srcset="
+                  ./images/tablet/about/img3.jpg    1x,
+                  ./images/tablet/about/img3@2x.jpg 2x
+                "
+                media="(min-width:768px)"
+                sizes="(min-width:768px) 450px"
+              />
+              <source
+                srcset="
+                  ./images/mobile/masters/img3.webp    1x,
+                  ./images/mobile/masters/img3@2x.webp 2x
+                "
+                media="(min-width:480px)"
+                type="image/webp"
+                sizes="(min-width:480px) 418px"
+              />
+              <source
+                srcset="
+                  ./images/mobile/about/img3.jpg    1x,
+                  ./images/mobile/about/img3@2x.jpg 2x
+                "
+                media="(min-width:480px)"
+                sizes="(min-width:480px) 418px"
+              />
+              <img
+                src="./images/mobile/masters/img3.jpg"
+                alt="мастер стрижет клиента"
+              />
+            </picture>
+            <div class="masters-box">
+              <h3 class="masters-box__name" lang="en">Alan Black</h3>
+              <p class="masters-box__job" lang="en">Extreme Barber</p>
+              <ul class="social-links-icons list">
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-links-icons__item">
+                  <a class="social-links-icons__link" href="#">
+                    <svg class="social-links-icons__icon">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- GALLERY -->
     <!-- <section class="gallery section">
