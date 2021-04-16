@@ -4,6 +4,10 @@
 
   transform: rotate(-90deg);
   transform-origin: left top;
+
+  @media screen and (max-width: 767px) {
+    justify-content: flex-end;
+  }
 }
 
 /* .hero-list-sns .hero-item-sns:before {
@@ -43,6 +47,11 @@
 }
 
 .socials-list__link_padding {
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }

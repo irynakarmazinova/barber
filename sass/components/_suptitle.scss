@@ -19,4 +19,8 @@
   &_margin-bottom {
     margin-bottom: 44px;
   }
+
+  &_font {
+    @include font(600, 11px, 21px, 0.1em);
+  }
 }
