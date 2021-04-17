@@ -1,13 +1,16 @@
 .contacts-right-side {
-  margin-left: auto;
-  padding-left: 100px;
-  padding-right: 200px;
-
   background-image: url(../images/contacts-form.png);
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    padding-left: 100px;
+    padding-right: 200px;
+  }
 }
 
 .address {
   margin-bottom: 70px;
+  display: inline-block;
 }
 
 .contacts-box {
@@ -46,6 +49,12 @@
   height: 24px;
 
   fill: currentColor;
+}
+
+.contacts-list__schedule {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: inline-block;
+  }
 }
 
 .contacts-list__text {

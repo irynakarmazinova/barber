@@ -142,6 +142,12 @@ ul {
   padding: 12px 38px;
 }
 
+@media screen and (max-width: 767px) {
+  .main-btn_padding {
+    margin: 0 auto;
+  }
+}
+
 .main-btn_flex {
   display: flex;
   margin-right: auto;
@@ -1080,9 +1086,20 @@ ul {
   background-color: var(--contacts-bgc);
 }
 
+@media screen and (min-width: 1200px) {
+  .contacts-form_flex {
+    display: flex;
+  }
+}
+
 .contacts-form__box {
-  display: flex;
   margin-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-form__box {
+    display: flex;
+  }
 }
 
 .contacts-form__input {
@@ -1157,14 +1174,20 @@ ul {
 }
 
 .contacts-right-side {
-  margin-left: auto;
-  padding-left: 100px;
-  padding-right: 200px;
   background-image: url(../images/contacts-form.png);
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-right-side {
+    margin-left: auto;
+    padding-left: 100px;
+    padding-right: 200px;
+  }
 }
 
 .address {
   margin-bottom: 70px;
+  display: inline-block;
 }
 
 .contacts-box {
@@ -1198,6 +1221,12 @@ ul {
   width: 24px;
   height: 24px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-list__schedule {
+    display: inline-block;
+  }
 }
 
 .contacts-list__text {

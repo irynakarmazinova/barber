@@ -3,11 +3,20 @@
   margin-right: auto;
   max-width: 1280px;
   background-color: var(--contacts-bgc);
+
+  &_flex {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
 }
 
 .contacts-form__box {
-  display: flex;
   margin-bottom: 44px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .contacts-form__input {
