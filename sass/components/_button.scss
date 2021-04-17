@@ -13,6 +13,7 @@
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
 
   transition: background-color 250ms linear;
@@ -21,6 +22,10 @@
   &:focus {
     background-color: var(--accent-text);
     border: 1px solid var(--accent-text);
+  }
+
+  &_padding {
+    padding: 12px 38px;
   }
 }
 
