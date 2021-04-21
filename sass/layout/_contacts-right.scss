@@ -1,16 +1,29 @@
-.contacts-right-side {
+.contacts-form-right {
   background-image: url(../images/contacts-form.png);
+  background-color: var(--contacts-bgc);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
+  }
 
   @media screen and (min-width: 1200px) {
-    margin-left: auto;
     padding-left: 100px;
     padding-right: 200px;
   }
 }
 
 .address {
-  margin-bottom: 70px;
   display: inline-block;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 44px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 70px;
+  }
 }
 
 .contacts-box {

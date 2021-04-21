@@ -5,10 +5,6 @@
 
   color: var(--secondary-text-color);
 
-  &_margin {
-    margin-bottom: 40px;
-  }
-
   @media screen and (min-width: 1200px) {
     margin-bottom: 44px;
   }
@@ -39,4 +35,20 @@
   margin-bottom: 44px;
 
   color: var(--dark-text-color);
+}
+
+.title-contacts-left-side {
+  margin-bottom: 44px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.title-contacts-right-side {
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
