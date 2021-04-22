@@ -1,5 +1,4 @@
 .footer-copyright {
-  display: inline-block;
   padding-top: 44px;
   padding-bottom: 44px;
 
@@ -9,6 +8,12 @@
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    left: 0;
+    top: 35px;
+  }
 
   @media screen and (min-width: 768px) {
     padding-top: 56px;
