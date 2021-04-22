@@ -45,7 +45,7 @@
     padding: 30px 40px 10px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     display: flex;
     padding: 0;
   }
@@ -67,13 +67,13 @@
     @include font(400, 18px, 30px, 0.02em);
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     padding: 30px 40px;
   }
 }
 
 .price-list-left {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     &:nth-child(2n + 1) {
       background-image: linear-gradient(
         180deg,
@@ -85,7 +85,7 @@
 }
 
 .price-list-right {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     &:nth-child(2n) {
       background-image: linear-gradient(
         180deg,
@@ -101,7 +101,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin-bottom: 0;
     &:not(:last-child) {
       margin-bottom: 20px;

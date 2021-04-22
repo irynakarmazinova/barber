@@ -3,7 +3,7 @@
 }
 
 .masters_flex {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
     flex-direction: column;
     max-width: 528px;
@@ -17,7 +17,7 @@
     align-items: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     display: flex;
   }
 }
@@ -29,13 +29,13 @@
     width: 450px;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1279px) {
     &:not(:last-child) {
       margin-bottom: 64px;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     flex-basis: calc((100% - 60px) / 3);
     margin-right: 30px;
     width: 370px;

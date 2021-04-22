@@ -6,7 +6,7 @@
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     flex-wrap: nowrap;
   }
 }
@@ -19,7 +19,7 @@
     width: 330px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     width: 270px;
   }
 }
@@ -33,7 +33,7 @@
   margin-right: 0;
 } */
 
-// @media screen and (min-width: 1200px) {
+// @media screen and (min-width: 1280px) {
 //   .slick-prev {
 //     left: -30px;
 //   }
