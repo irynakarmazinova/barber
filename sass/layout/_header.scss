@@ -1,6 +1,11 @@
 .header {
-  position: absolute;
   width: 100%;
+}
+
+.header-box {
+  position: relative;
+  // @include flex;
+  // flec-center
 }
 
 .navigation {
@@ -14,11 +19,19 @@
 }
 
 .logo__icon {
-  fill: var(--dark-text-color);
+  fill: var(--secondary-text-color);
+
+  @media screen and (min-width: 768px) {
+    fill: var(--dark-text-color);
+  }
 }
 
 .header-list {
-  display: flex;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .header-list__item {
@@ -46,22 +59,27 @@
 }
 
 .header-tel {
-  margin-left: auto;
-  margin-right: 40px;
-  padding: 52px 0;
+  display: none;
 
-  color: var(--secondary-text-color);
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+    margin-right: 40px;
+    padding: 52px 0;
 
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+    color: var(--secondary-text-color);
 
-  transition: color 250ms linear;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 
-  &:hover,
-  &:focus {
-    color: var(--accent-text);
+    transition: color 250ms linear;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-text);
+    }
   }
 }
