@@ -3,7 +3,9 @@
 }
 
 .header-box {
-  position: relative;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
   // @include flex;
   // flec-center
 }
@@ -11,11 +13,23 @@
 .navigation {
   display: flex;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 47px;
+  }
 }
 
 .logo {
-  margin-right: 71px;
-  padding: 32px 0;
+  margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 64px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 71px;
+    // padding: 32px 0;
+  }
 }
 
 .logo__icon {
@@ -35,8 +49,16 @@
 }
 
 .header-list__item {
-  &:not(:last-child) {
-    margin-right: 40px;
+  @media screen and (max-width: 1279px) {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
   }
 }
 
@@ -62,9 +84,8 @@
   display: none;
 
   @media screen and (min-width: 768px) {
-    display: block;
-    margin-left: auto;
-    margin-right: 40px;
+    display: inline-block;
+
     padding: 52px 0;
 
     color: var(--secondary-text-color);
@@ -81,5 +102,10 @@
     &:focus {
       color: var(--accent-text);
     }
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: auto;
+    margin-right: 40px;
   }
 }

@@ -1,4 +1,6 @@
 .price {
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--price-bgc);
   background-image: url(../images/mobile/price/img.png);
   max-width: 480px;

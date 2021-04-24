@@ -1,14 +1,11 @@
 .hero {
-  position: absolute;
-}
-
-.hero-left-size {
-  display: flex;
-  align-items: flex-end;
-  width: 100px;
+  position: relative;
 }
 
 .hero-left-side {
+  display: flex;
+  align-items: flex-end;
+  width: 100px;
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -18,6 +15,8 @@
   flex-grow: 1;
   padding-top: 208px;
   padding-bottom: 183px;
+  max-width: 480px;
+  margin: 0 auto;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,7 +57,7 @@
 
   // десктоп
   @media screen and (min-width: 1280px) {
-    max-width: 625px;
+    // max-width: 625px;
     height: 644px;
     padding-top: 272px;
     padding-bottom: 206px;
@@ -99,6 +98,10 @@
   font-family: var(--secondary-font);
 
   color: var(--secondary-text-color);
+
+  @media screen and (max-width: 320px) {
+    @include font(700, 42px, 56px, 0.05em);
+  }
 
   @media screen and (min-width: 1280px) {
     @include font(700, 72px, 85px, 0.05em);
