@@ -1,13 +1,23 @@
 .hero {
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .hero-left-side {
   display: flex;
   align-items: flex-end;
   width: 100px;
+
   @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @media screen and (max-width: 1279px) {
+    padding-left: 39px;
+    padding-right: 30px;
   }
 }
 
@@ -15,7 +25,7 @@
   flex-grow: 1;
   padding-top: 208px;
   padding-bottom: 183px;
-  max-width: 480px;
+  // max-width: 480px;
   margin: 0 auto;
 
   background-repeat: no-repeat;
@@ -39,8 +49,11 @@
 
   // таблетка
   @media screen and (min-width: 768px) {
+    padding-top: 272px;
+    padding-bottom: 245px;
+    padding-left: 120px;
     // max-width: 768px;
-    height: 449px;
+    // height: 449px;
 
     background-image: url(../images/tablet/hero/img.jpg);
 
@@ -58,7 +71,7 @@
   // десктоп
   @media screen and (min-width: 1280px) {
     // max-width: 625px;
-    height: 644px;
+    // height: 644px;
     padding-top: 272px;
     padding-bottom: 206px;
     padding-left: 100px;
@@ -77,6 +90,18 @@
         ),
         url('../images/desktop/hero/img@2x.jpg');
     }
+  }
+}
+
+.hero-right-side-container {
+  @media screen and(min-width:480px) and (max-width: 767px) {
+    max-width: 480px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+    padding: 0 31px;
+    width: 100%;
   }
 }
 
