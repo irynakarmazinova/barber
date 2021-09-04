@@ -39,13 +39,19 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="container header-box">
+      <a class="logo link animate__zoomIn" href="#">
+        <svg class="logo__icon" width="68" height="54">
+          <use href="./images/symbol-defs.svg#icon-logo"></use>
+        </svg>
+      </a>
+
+      <div class="header-box">
         <nav class="navigation">
-          <a class="logo link animate__zoomIn" href="#">
+          <!-- <a class="logo link animate__zoomIn" href="#">
             <svg class="logo__icon" width="68" height="54">
               <use href="./images/symbol-defs.svg#icon-logo"></use>
             </svg>
-          </a>
+          </a> -->
           <ul class="header-list list">
             <li class="header-list__item">
               <a class="header-list__link link" href="#">О нас</a>
@@ -86,46 +92,44 @@
     <main>
       <!-- HERO -->
       <section class="hero">
-        <div class="container">
-          <!-- left -->
-          <div class="hero-left-side">
-            <ul class="socials-list list dash dash_margin-right">
-              <li class="socials-list__item">
-                <a
-                  class="socials-list__link link"
-                  href="https://www.instagram.com/"
-                  lang="en"
-                  target="_blank"
-                  rel="noopener nofollow"
-                  >Instagram</a
-                >
-              </li>
-              <li class="socials-list__item">
-                <a
-                  class="socials-list__link link"
-                  href="https://www.youtube.com/"
-                  lang="en"
-                  target="_blank"
-                  rel="noopener nofollow"
-                  >Youtube</a
-                >
-              </li>
-            </ul>
-          </div>
+        <!-- left -->
+        <div class="hero-left-side">
+          <ul class="socials-list list dash dash_margin-right">
+            <li class="socials-list__item">
+              <a
+                class="socials-list__link link"
+                href="https://www.instagram.com/"
+                lang="en"
+                target="_blank"
+                rel="noopener nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="socials-list__item">
+              <a
+                class="socials-list__link link"
+                href="https://www.youtube.com/"
+                lang="en"
+                target="_blank"
+                rel="noopener nofollow"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
 
-          <!-- right -->
-          <div class="hero-right-side">
-            <div class="hero-right-side-container">
-              <div class="hero-box">
-                <p class="suptitle suptitle_light dash dash_light" lang="en">
-                  A hair salon for men in Kyiv
-                </p>
-                <h1 class="hero-title" lang="en">BarberShop</h1>
-                <p class="subtitle">
-                  Мы эксперты в модных мужских стрижках. Работаем быстро,
-                  осторожно и со вкусом.
-                </p>
-              </div>
+        <!-- right -->
+        <div class="hero-right-side">
+          <div class="hero-right-side-container">
+            <div class="hero-box">
+              <p class="suptitle suptitle_light dash dash_light" lang="en">
+                A hair salon for men in Kyiv
+              </p>
+              <h1 class="hero-title" lang="en">BarberShop</h1>
+              <p class="subtitle">
+                Мы эксперты в модных мужских стрижках. Работаем быстро,
+                осторожно и со вкусом.
+              </p>
             </div>
           </div>
         </div>
@@ -645,7 +649,10 @@
       <section class="gallery section">
         <div class="container">
           <p
-            class="suptitle suptitle_dark suptitle_margin-bottom suptitle_font dash dash_dark"
+            class="
+              suptitle suptitle_dark suptitle_margin-bottom suptitle_font
+              dash dash_dark
+            "
           >
             На латинском языке “барба” означает “борода”
           </p>
@@ -951,7 +958,7 @@
                         target="_blank"
                         rel="noopener nofollow"
                       >
-                        <svg class="contacts-list__icon">
+                        <svg class="contacts-list__icon link-map">
                           <use href="./images/symbol-defs.svg#icon-map"></use>
                         </svg>
                         ул. Васильковая, 7А Киев, 08132</a
@@ -962,9 +969,9 @@
                         class="contacts-list__link link"
                         href="tel:+380441111111"
                       >
-                        <svg class="contacts-list__icon">
+                        <svg class="contacts-list__icon link-phone">
                           <use
-                            href="./images/symbol-defs.svg#icon-smartphone-1"
+                            href="./images/symbol-defs.svg#icon-mobile-phone"
                           ></use>
                         </svg>
                         +38 044 111 11 11</a
@@ -976,7 +983,7 @@
                         href="mailto:barbershop@email.com"
                         lang="en"
                       >
-                        <svg class="contacts-list__icon">
+                        <svg class="contacts-list__icon link-mail">
                           <use href="./images/symbol-defs.svg#icon-mail"></use>
                         </svg>
                         barbershop@email.com</a
@@ -1002,7 +1009,12 @@
       <div class="container flex">
         <p class="footer-copyright" lang="en">&copy; Copyright 2020</p>
         <ul
-          class="socials-list socials-list_not-rotate dash_margin-right list socials-list_absolute"
+          class="
+            socials-list socials-list_not-rotate
+            dash_margin-right
+            list
+            socials-list_absolute
+          "
         >
           <li class="socials-list__item">
             <a

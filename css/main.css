@@ -163,7 +163,6 @@ ul {
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero-btn {
-    margin-top: 40px;
     margin-bottom: 10px;
   }
 }
@@ -310,8 +309,8 @@ ul {
 
 .socials-list__link {
   display: flex;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: var(--dark-text-color);
   font-weight: 600;
   font-size: 11px;
@@ -650,16 +649,35 @@ ul {
 .header-box {
   position: absolute;
   z-index: 2;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 0 31px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-box {
+    max-width: 768px;
+    padding: 0 39px;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 @media screen and (max-width: 1279px) {
   .header-box {
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header-box {
+    max-width: 1280px;
+    padding: 0 55px;
+    display: inline-block;
   }
 }
 
@@ -675,19 +693,22 @@ ul {
 }
 
 .logo {
-  margin-top: 40px;
+  position: absolute;
+  top: 40px;
+  left: 31px;
 }
 
 @media screen and (min-width: 768px) {
   .logo {
-    margin-top: 32px;
-    margin-right: 64px;
+    top: 32px;
+    left: 50px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .logo {
-    margin-right: 71px;
+    top: 42px;
+    left: 55px;
   }
 }
 
@@ -737,6 +758,18 @@ ul {
   color: var(--accent-text);
 }
 
+.header-contacts-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header-contacts-box {
+    margin-top: 40px;
+  }
+}
+
 .header-tel {
   display: none;
 }
@@ -762,7 +795,6 @@ ul {
   .header-tel {
     position: absolute;
     top: 100px;
-    right: 58px;
     padding: 10px;
   }
 }
@@ -798,8 +830,8 @@ ul {
 
 @media screen and (max-width: 1279px) {
   .hero-left-side {
-    padding-left: 39px;
-    padding-right: 30px;
+    margin-left: 39px;
+    margin-right: 10px;
   }
 }
 
@@ -1581,10 +1613,20 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.contacts-list__icon {
-  margin-right: 16px;
+.link-map {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 16px;
+}
+
+.link-phone,
+.link-mail {
   width: 24px;
   height: 24px;
+}
+
+.contacts-list__icon {
+  margin-right: 16px;
   fill: currentColor;
 }
 
