@@ -1,33 +1,6 @@
 .hero {
   position: relative;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
-
-.hero-left-side {
-  display: flex;
-  align-items: flex-end;
-  width: 100px;
-
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-
-  @media screen and (max-width: 1279px) {
-    margin-left: 39px;
-    margin-right: 10px;
-  }
-}
-
-.hero-right-side {
-  flex-grow: 1;
-  padding-top: 208px;
-  padding-bottom: 183px;
-  // max-width: 480px;
-  margin: 0 auto;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--price-bgc);
@@ -47,14 +20,47 @@
       url('../images/mobile/hero/img@2x.jpg');
   }
 
+  @media screen and (min-width: 768px) {
+    background-image: none;
+    background-color: var(--secondary-text-color);
+  }
+}
+
+.hero-left-side {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 620px;
+    left: 60px;
+
+    display: flex;
+
+    // width: 90px;
+    // margin-left: 39px;
+
+    transform: rotate(-90deg);
+    transform-origin: left top;
+  }
+}
+
+.hero-right-side {
+  padding-top: 208px;
+  padding-bottom: 183px;
+
   // таблетка
   @media screen and (min-width: 768px) {
+    flex-grow: 1;
     padding-top: 272px;
     padding-bottom: 245px;
     padding-left: 120px;
-    // max-width: 768px;
-    // height: 449px;
+    margin-left: 120px;
 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--price-bgc);
     background-image: url(../images/tablet/hero/img.jpg);
 
     @media (min-device-pixel-ratio: 2),
@@ -70,8 +76,6 @@
 
   // десктоп
   @media screen and (min-width: 1280px) {
-    // max-width: 625px;
-    // height: 644px;
     padding-top: 272px;
     padding-bottom: 206px;
     padding-left: 100px;
@@ -93,24 +97,13 @@
   }
 }
 
-.hero-right-side-container {
-  @media screen and(min-width:480px) and (max-width: 767px) {
-    max-width: 480px;
-  }
-
-  @media screen and (max-width: 767px) {
-    margin: 0 auto;
-    padding: 0 31px;
-    width: 100%;
-  }
-}
-
 .hero-box {
   max-width: 306px;
 
   @media screen and (min-width: 768px) {
     max-width: 355px;
   }
+
   @media screen and (min-width: 1280px) {
     max-width: 500px;
   }

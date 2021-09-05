@@ -1,9 +1,7 @@
 .socials-list {
   display: flex;
   align-items: center;
-
-  transform: rotate(-90deg);
-  transform-origin: left top;
+  justify-content: space-between;
 
   @media screen and (max-width: 767px) {
     justify-content: flex-end;
@@ -18,11 +16,6 @@
   }
 }
 
-/* .hero-list-sns .hero-item-sns:before {
-  content: '';
-  transform-origin: left top;
-} */
-
 .socials-list__item {
   &:not(:last-child) {
     margin-right: 40px;
@@ -31,8 +24,8 @@
 
 .socials-list__link {
   display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 
   color: var(--dark-text-color);
 
@@ -42,6 +35,15 @@
   letter-spacing: 0.2em;
 
   transition: color 250ms linear;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // width: 44px;
+  // height: 44px;
+  // border-radius: 50%;
+  // background-color: #ffffff;
+  // transition: background-color 250ms linear;
 
   &:hover,
   &:focus {
