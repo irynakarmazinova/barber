@@ -25,16 +25,14 @@
 
 .close-btn {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 30px;
-  height: 30px;
+  top: 20px;
+  right: 20px;
   padding: 0;
 
   background-color: transparent;
 
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: transparent;
   cursor: pointer;
 
   display: flex;

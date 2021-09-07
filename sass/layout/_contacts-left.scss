@@ -7,9 +7,20 @@
   }
 }
 
-.contacts-form {
+.contacts-left-side {
+  padding: 84px 31px 84px 31px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 39px 100px 39px;
+  }
+
   @media screen and (max-width: 1279px) {
     margin: 0 auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 130px 55px 130px 55px;
   }
 }
 
@@ -113,7 +124,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  display: flex;
   margin-bottom: 44px;
 }
 

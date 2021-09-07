@@ -119,7 +119,7 @@ ul {
 
 .main-btn {
   padding: 12px 20px;
-  min-width: 160px;
+  min-width: 163px;
   border-radius: 25px;
   border: 1px solid var(--accent-text);
   color: var(--secondary-text-color);
@@ -290,16 +290,32 @@ ul {
   }
 }
 
-@media screen and (max-width: 767px) {
+.socials-list_absolute {
+  position: absolute;
+  right: 31px;
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
   .socials-list_absolute {
-    position: absolute;
-    right: 0;
-    top: 0;
+    right: 39px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .socials-list_absolute {
+    right: 55px;
   }
 }
 
 .socials-list__item:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 25px;
+}
+
+@media screen and (min-width: 480px) {
+  .socials-list__item:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .socials-list__link {
@@ -482,14 +498,12 @@ ul {
 
 .close-btn {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 30px;
-  height: 30px;
+  top: 20px;
+  right: 20px;
   padding: 0;
   background-color: transparent;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -602,6 +616,24 @@ ul {
 /* для оформления чекбокса-нужно инлайн свг */
 /* transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 2500sms cubic-bezier(0.4, 0, 0.2, 1); */
+.modal-agreement {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-agreement {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+
 .modal-checkbox:checked + .modal-agreement-icon {
   background-color: var(--accent-text);
   border-color: transparent;
@@ -609,19 +641,12 @@ ul {
   background-origin: border-box;
 }
 
-/* .modal-checkbox:focus + .modal-agreement-icon {
-  border-color: var(--accent-text);
-} */
-.modal-checkbox:focus-visible + .modal-agreement::before {
+.modal-checkbox:focus + .modal-agreement-icon {
   border-color: var(--accent-text);
 }
 
-.modal-agreement {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--main-text-color);
-  cursor: pointer;
+.modal-checkbox:focus-visible + .modal-agreement::before {
+  border-color: var(--accent-text);
 }
 
 .modal-agreement-link {
@@ -630,6 +655,7 @@ ul {
 
 .modal-btn {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
 }
 
 .modal-btn:hover,
@@ -1324,13 +1350,15 @@ ul {
 }
 
 .gallery-list {
-  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
   .gallery-list {
-    display: flex;
-    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-bottom: -15px;
   }
 }
 
@@ -1342,12 +1370,20 @@ ul {
 
 .gallery-list__item {
   width: 100%;
-  margin: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-list__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .gallery-list__item {
     width: 330px;
+    flex-basis: calc(100% / 2 - 15px);
+    margin-right: 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1376,9 +1412,26 @@ ul {
   }
 }
 
+.contacts-left-side {
+  padding: 84px 31px 84px 31px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-left-side {
+    padding: 100px 39px 100px 39px;
+  }
+}
+
 @media screen and (max-width: 1279px) {
-  .contacts-form {
+  .contacts-left-side {
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts-left-side {
+    padding: 130px 55px 130px 55px;
   }
 }
 
@@ -1494,7 +1547,6 @@ ul {
   position: relative;
   display: flex;
   align-items: center;
-  display: flex;
   margin-bottom: 44px;
 }
 
@@ -1516,7 +1568,10 @@ ul {
   }
 }
 
-.contacts-form-right {
+.contacts-right-side {
+  padding: 84px 31px 84px 31px;
+  margin: 0 auto;
+  width: 100%;
   height: 496px;
   background-image: url(../images/mobile/contacts/img.png);
   background-color: var(--contacts-bgc);
@@ -1525,40 +1580,43 @@ ul {
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .contacts-form-right {
+  .contacts-right-side {
     background-image: url("../images/mobile/contacts/img@2x.png");
   }
 }
 
 @media screen and (min-width: 768px) {
-  .contacts-form-right {
+  .contacts-right-side {
+    padding: 100px 39px 100px 39px;
     height: 449px;
     background-image: url(../images/tablet/contacts/img.png);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .contacts-form-right {
+  .contacts-right-side {
     background-image: url("../images/tablet/contacts/img@2x.png");
   }
 }
 
 @media screen and (max-width: 1279px) {
-  .contacts-form-right {
+  .contacts-right-side {
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .contacts-form-right {
+  .contacts-right-side {
+    padding: 130px 255px 130px 100px;
     height: 644px;
+    margin-right: auto;
+    background-image: url(../images/desktop/contacts/img.png);
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .contacts-right-side {
-    margin-left: 45px;
-    margin-right: 200px;
+    background-image: url("../images/desktop/contacts/img@2x.png");
   }
 }
 
@@ -1649,6 +1707,9 @@ ul {
 }
 
 .footer-copyright {
+  position: absolute;
+  left: 31px;
+  top: 35px;
   padding-top: 44px;
   padding-bottom: 44px;
   color: var(--middle-text-color);
@@ -1658,18 +1719,17 @@ ul {
   letter-spacing: 0.2em;
 }
 
-@media screen and (max-width: 767px) {
-  .footer-copyright {
-    position: absolute;
-    left: 0;
-    top: 35px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .footer-copyright {
     padding-top: 56px;
     padding-bottom: 56px;
+    left: 39px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-copyright {
+    right: 55px;
   }
 }
 /*# sourceMappingURL=main.css.map */

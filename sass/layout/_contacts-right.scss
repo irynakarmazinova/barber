@@ -1,6 +1,10 @@
-.contacts-form-right {
+.contacts-right-side {
+  padding: 84px 31px 84px 31px;
+  margin: 0 auto;
+  width: 100%;
   // max-width: 480px;
   height: 496px;
+
   background-image: url(../images/mobile/contacts/img.png);
   background-color: var(--contacts-bgc);
   background-repeat: no-repeat;
@@ -14,6 +18,7 @@
 
   // таблетка
   @media screen and (min-width: 768px) {
+    padding: 100px 39px 100px 39px;
     // max-width: 768px;
     height: 449px;
 
@@ -32,23 +37,18 @@
 
   // десктоп
   @media screen and (min-width: 1280px) {
+    padding: 130px 255px 130px 100px;
     // max-width: 625px;
     height: 644px;
+    margin-right: auto;
 
-    // background-image: url(../images/desktop/contacts/img.png);
+    background-image: url(../images/desktop/contacts/img.png);
 
-    // @media (min-device-pixel-ratio: 2),
-    //   (min-resolution: 192dpi),
-    //   (min-resolution: 2dppx) {
-    //   background-image: url('../images/desktop/contacts/img@2x.png');
-    // }
-  }
-}
-
-.contacts-right-side {
-  @media screen and (min-width: 1280px) {
-    margin-left: 45px;
-    margin-right: 200px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/contacts/img@2x.png');
+    }
   }
 }
 

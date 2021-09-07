@@ -8,17 +8,29 @@
   }
 
   &_absolute {
-    @media screen and (max-width: 767px) {
-      position: absolute;
-      right: 0;
-      top: 0;
+    position: absolute;
+    right: 31px;
+    top: 0;
+
+    @media screen and (min-width: 768px) {
+      right: 39px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      right: 55px;
     }
   }
 }
 
 .socials-list__item {
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 25px;
+  }
+
+  @media screen and (min-width: 480px) {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
   }
 }
 
