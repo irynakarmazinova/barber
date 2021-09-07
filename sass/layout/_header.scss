@@ -28,6 +28,9 @@
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
     padding: 0 55px;
+
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -36,27 +39,29 @@
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    margin-right: 47px;
+    margin-right: 33px;
     justify-content: flex-start;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-right: auto;
+    margin-right: 275px;
   }
 }
 
 .logo {
-  // margin-top: 40px;
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+  }
 
   @media screen and (min-width: 768px) {
-    // margin-top: 32px;
+    margin-top: 32px;
     // margin-right: 64px;
     margin-right: 59px;
     margin-left: 11px;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-top: 40px;
+    margin-top: 10px;
     margin-right: 71px;
   }
 }
@@ -75,6 +80,12 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
+
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 0;
   }
 }
 
