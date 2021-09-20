@@ -63,3 +63,49 @@
     color: var(--secondary-text-color);
   }
 }
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+
+  @include flex-center;
+
+  cursor: pointer;
+  border-radius: 50%;
+  border: transparent;
+  background-color: transparent;
+  color: var(--dark-text-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-text);
+  }
+
+  // &__modal {
+  //   top: 8px;
+  //   right: 8px;
+  //   border-radius: 50%;
+  //   border: 1px solid rgba(0, 0, 0, 0.1);
+  // }
+
+  &__mobile {
+    top: 59px;
+    right: 41px;
+    border: none;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-text);
+    }
+  }
+}
+
+/* .close-btn-icon {
+  fill: var(--logo-text-color);
+} */

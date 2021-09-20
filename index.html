@@ -61,6 +61,7 @@
             </li>
           </ul>
 
+          <!-- икнока бургер меню -->
           <button type="button" class="burger-menu">
             <svg class="burger-menu__icon" width="40" height="40">
               <use href="./images/symbol-defs.svg#icon-burger-menu"></use>
@@ -80,6 +81,77 @@
             онлайн-запись
           </button>
         </div>
+      </div>
+
+      <!-- МОБИЛЬНОЕ МЕНЮ -->
+      <div class="mobile-menu is-open" data-menu>
+        <nav class="navigation-mobile-menu">
+          <ul class="header-list list">
+            <li class="header-list__item">
+              <a class="header-list__link link" href="#">О нас</a>
+            </li>
+            <li class="header-list__item">
+              <a class="header-list__link link" href="#">Услуги и цены</a>
+            </li>
+            <li class="header-list__item">
+              <a class="header-list__link link" href="#">Мастера</a>
+            </li>
+            <li class="header-list__item">
+              <a class="header-list__link link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-contacts-box">
+          <a class="header-tel link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button
+            class="main-btn hero-btn animate__zoomIn"
+            type="submit"
+            data-modal-open
+          >
+            онлайн-запись
+          </button>
+        </div>
+
+        <ul class="socials-list list dash dash_margin-right">
+          <li class="socials-list__item">
+            <a
+              class="socials-list__link link"
+              href="https://www.instagram.com/"
+              lang="en"
+              target="_blank"
+              rel="noopener nofollow"
+              >Instagram</a
+            >
+          </li>
+          <li class="socials-list__item">
+            <a
+              class="socials-list__link link"
+              href="https://www.youtube.com/"
+              lang="en"
+              target="_blank"
+              rel="noopener nofollow"
+              >Youtube</a
+            >
+          </li>
+        </ul>
+
+        <button
+          type="button"
+          class="close-btn close-btn__mobile"
+          data-menu-close
+        >
+          <svg
+            class="close-btn__mobile-icon"
+            width="19"
+            height="19"
+            data-menu-close
+          >
+            <use href="./images/symbol-defs.svg#icon-close-btn"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -1099,9 +1171,6 @@
         </button>
       </div>
     </div>
-
-    <!-- МОБИЛЬНОЕ МЕНЮ -->
-    <div class="modal-window-mobile"></div>
 
     <!-- JS -->
     <script src="./js/modal.js"></script>

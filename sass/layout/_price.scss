@@ -1,10 +1,10 @@
 .price {
+  margin: 0 auto;
+
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--price-bgc);
   background-image: url(../images/mobile/price/img.png);
-  max-width: 480px;
-  margin: 0 auto;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -14,7 +14,7 @@
 
   @media screen and (min-width: 480px) {
     background-image: url(../images/tablet/price/img.png);
-    max-width: 768px;
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
@@ -24,7 +24,7 @@
 
   @media screen and (min-width: 768px) {
     background-image: url(../images/desktop/price/img.png);
-    max-width: 1280px;
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
